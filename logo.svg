@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="192.68294mm"
+   height="67.347305mm"
+   viewBox="0 0 192.68294 67.347305"
+   version="1.1"
+   id="svg1"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview1"
+     pagecolor="#505050"
+     bordercolor="#ffffff"
+     borderopacity="1"
+     inkscape:showpageshadow="0"
+     inkscape:pageopacity="0"
+     inkscape:pagecheckerboard="1"
+     inkscape:deskcolor="#505050"
+     inkscape:document-units="mm" />
+  <defs
+     id="defs1">
+    <rect
+       x="175.20908"
+       y="361.58795"
+       width="364.08618"
+       height="139.73801"
+       id="rect1" />
+  </defs>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(-6.2437054,-94.080121)">
+    <text
+       xml:space="preserve"
+       transform="matrix(7.6461504,0,0,7.6461504,-1337.2842,-2699.0272)"
+       id="text1"
+       style="white-space:pre;shape-inside:url(#rect1);fill:#000000"><tspan
+         x="175.20898"
+         y="373.88789"
+         id="tspan3"><tspan
+           style="font-size:12px;font-family:'Major Mono Display';-inkscape-font-specification:'Major Mono Display, Normal';fill:#a2106d;fill-opacity:0.977554"
+           id="tspan2">A.S</tspan></tspan></text>
+  </g>
+</svg>
