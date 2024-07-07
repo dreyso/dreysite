@@ -33,12 +33,16 @@ main {
   margin-top: 120px; /* Spacer between head banner and page*/
 }
 
+.highlight-first::first-letter {
+  color: var(--main);
+}
+
 /* Banner styling*/
 #banner {
   position: fixed;
   top: 0;
   width: 100%;
-  height: 100px;
+  height: min-content;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -56,5 +60,65 @@ main {
   margin: 20px 20px;
 }
 
+.menu-button-clicked {
+  background-color: white;
+  border-radius: 5px;
+}
 
+/*Mobile menu styling*/
+
+#mobile-menu {
+  position: fixed;
+  visibility: hidden;
+  background-color: transparent;
+  width: fit-content;
+  height: fit-content;
+  right: -300px;
+  transition: all 0.1s ease;
+  z-index: 1;
+}
+
+.mobile-menu-open {
+  visibility: visible !important;
+  transform: translate(-300px) !important;
+}
+
+#mobile-menu a {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  transition: all 0.1s ease;
+}
+
+.cont {
+  display: flex;
+  align-items: center;
+  color: black;
+  font-size: 1.2em;
+  font-weight: bold;
+  background-color: white;
+  width: 100%;
+}
+
+.triangle {
+  width: auto;
+  height: auto;
+  border-top: 30px solid transparent; /* Sum of top and bottom = height*/
+  border-bottom: 30px solid transparent;
+  border-right: 20px solid white; /*triangle width*/
+}
+
+.active-link span::first-letter{
+  color: black !important;
+ }
+
+.active-link .cont {
+  background-color: var(--main);
+  color: white;
+
+}
+
+.active-link .triangle {
+  border-right-color: var(--main);
+}
 
