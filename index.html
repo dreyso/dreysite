@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Andrey Steblyakov</title>
     <link rel="icon" href="img/logo.svg" type="image/svg">
-    <link rel="stylesheet" href="reset.css" />
+    <link rel="stylesheet" href="base.css" />
    
     <link rel="stylesheet" href="style.css" />
 
@@ -21,67 +21,97 @@
 
   </head>
   <body>
-    <header id="banner">
-      <a href="#"><img src="img/logo.svg" id="logo" title="Andrey Steblyakov"/></a>
-      <button id="nav-toggle"><img src="img/menu-closed.svg" id="menu-icon"/></button>
-    </header>
-    <nav id="mobile-menu">
-      <a href="#abode">
-        <div class="triangle"></div>
-        <div class="cont"><span class="highlight-first">Abode</span></div>
-      </a>
-      <a href="#narrative">
-        <div class="triangle"></div>
-        <div class="cont"><span class="highlight-first">Narrative</span></div>
-      </a>
-      <a href="#details">
-        <div class="triangle"></div>
-        <div class="cont"><span class="highlight-first">Details</span></div>
-      </a>
-      <a href="#records">
-        <div class="triangle"></div>
-        <div class="cont"><span class="highlight-first">Records</span></div>
-      </a>
-      <a href="#endeavors">
-        <div class="triangle"></div>
-        <div class="cont"><span class="highlight-first">Endeavors</span></div>
-      </a>
-      <a href="#yours">
-        <div class="triangle"></div>
-        <div class="cont"><span class="highlight-first">Yours</span></div>
-      </a>
-    </nav>
+      <header id="banner">
+        <a href="#"><img src="img/logo.svg" id="logo" title="Andrey Steblyakov"/></a>
+        <button id="nav-toggle"><img src="img/menu-closed.svg" id="menu-icon"/></button>
+      </header>
+      <nav id="mobile-menu">
+        <a href="#abode">
+          <div class="triangle"></div>
+          <div class="cont"><span class="highlight-first">Abode</span></div>
+        </a>
+        <a href="#narrative">
+          <div class="triangle"></div>
+          <div class="cont"><span class="highlight-first">Narrative</span></div>
+        </a>
+        <a href="#details">
+          <div class="triangle"></div>
+          <div class="cont"><span class="highlight-first">Details</span></div>
+        </a>
+        <a href="#records">
+          <div class="triangle"></div>
+          <div class="cont"><span class="highlight-first">Records</span></div>
+        </a>
+        <a href="#endeavors">
+          <div class="triangle"></div>
+          <div class="cont"><span class="highlight-first">Endeavors</span></div>
+        </a>
+        <a href="#yours">
+          <div class="triangle"></div>
+          <div class="cont"><span class="highlight-first">Yours</span></div>
+        </a>
+      </nav>
     <main>    
-      <header id="abode">
+      <header id="abode" class="slice">
         <h1>
           Hi, <br />
-          I'm Andrey
+          I'm <span class="highlight">Andrey</span>
         </h1>
 
         <p>
           As a student, I chase the bounds of computing. I hope that as a veteran,
           I will push them further yet.
         </p>
+        <img src="https://placehold.co/400"/>
       </header>
       
-      <section id="narrative">
-        <h2>Narrative</h2>
+      <section id="narrative" class="slice">
+        <h2 class="highlight-first">Narrative</h2>
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ducimus, nulla animi impedit magni est similique quos numquam ut! Adipisci error minima deleniti nisi laudantium animi ipsam numquam maxime illum quis.</p>
       </section>
 
-      <section id="details">
-        <h2>Details</h2>
+      <section id="details" class="slice">
+        <h2 class="highlight-first">Details</h2>
+        <ul>
+          <li>C, C++, Python</li>
+          <li>Web dev (CSS Grid / Flexbox / JS)</li>
+          <li>Flask, PostgreSQL</li>
+          <li>Visual Studio/Visual Studio Code/Vim</li>
+          <li>Git (GitHub handle: dreyso)</li>
+          <li>Linux kernel modules</li>
+          <li>SDL 2</li>
+          <li>Bilingual: English and Russian</li>
+        </ul>
       </section>
 
-      <section id="records">
-        <h2>Records</h2>
+      <section id="records" class="slice">
+        <h2 class="highlight-first">Records</h2>
+        <h3>
+          Software Engineering Intern, Portland State Aerospace Society,
+          Portland, OR 6/2023 - 10/2023<br />
+          Software for OreSat 0.5, Oregon’s second satellite.
+        </h3>
+        <ul>
+          <li>
+            Created a REST API to simplify command delivery and testing,
+            allowing PSAS to send and receive commands through web browsers,
+            improving accessibility and usability.
+          </li>
+          <li>
+            Contributed to the OreSat Linux App Framework (OLAF), completing the
+            star tracker app to determine attitude and capture Earth and space
+            photos.
+          </li>
+        </ul>
       </section>
 
-      <section id="endeavors" >
-        <h2>Endeavors</h2>
+      <section id="endeavors" class="slice">
+        <h2 class="highlight-first">Endeavors</h2>
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ducimus, nulla animi impedit magni est similique quos numquam ut! Adipisci error minima deleniti nisi laudantium animi ipsam numquam maxime illum quis.</p>
       </section>
       
-      <footer id="yours">
-        <h2>Yours</h2>
+      <footer id="yours" class="slice">
+        <h2 class="highlight-first">Yours</h2>
         <p>Adreysco@gmail.com</p>
       </footer>
     </main>
