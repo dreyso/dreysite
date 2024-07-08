@@ -1,22 +1,41 @@
-    let navToggle = document.querySelector("#nav-toggle");
-    let mobileMenu = document.querySelector("#mobile-menu");
-    let icon = document.querySelector("#menu-icon");
+document.addEventListener("DOMContentLoaded", () => {
+  const navToggle = document.querySelector("#nav-toggle");
+  const mobileMenu = document.querySelector("#mobile-menu");
+  const icon = document.querySelector("#menu-icon");
 
-    navToggle.onclick = function (event) {
+  navToggle.addEventListener('click', () => {
       mobileMenu.classList.toggle("mobile-menu-open");
       icon.classList.toggle("menu-button-clicked");
 
-      if (icon.src.endsWith('img/menu-closed.svg')) {
-        icon.src = 'img/menu-open.svg';
-      } else {
-        icon.src = 'img/menu-closed.svg';
-      }
-    };
+      icon.src = icon.src.endsWith('img/menu-closed.svg') 
+          ? 'img/menu-open.svg' 
+          : 'img/menu-closed.svg';
+  });
 
-    // Calculate the header height and set the top position of nav
-    var header = document.querySelector("#banner");
-    var nav = document.querySelector("#mobile-menu");
+  const sections = document.querySelectorAll("section");
+  const navLinks = document.querySelectorAll("#mobile-menu a");
 
-    if (header && nav) {
-      nav.style.top = header.offsetHeight + "px";
-    }
+  const options = {
+      threshold: 0.9
+  };
+
+  const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+          if (entry.isIntersecting) {
+              const id = entry.target.getAttribute("id");
+              navLinks.forEach(link => {
+                  link.classList.toggle("active-link", link.getAttribute("href").substring(1) === id);
+              });
+          }
+      });
+  }, options);
+
+  sections.forEach(section => {
+      observer.observe(section);
+  });
+});
+
+
+
+    
+    
