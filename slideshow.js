@@ -2,7 +2,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const slides = document.querySelectorAll(".slides");
   const tabs = document.querySelectorAll(".tabs");
 
-  /*Display only the active slide and highlight only the active tab*/
+  // Display only the active slide and highlight only the active tab
   function showSlide(slideIndex) {
     slides.forEach((slide, index) => {
       slide.style.display = (index === slideIndex) ? "block" : "none";
@@ -13,7 +13,7 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
-  /*Give each tab an event listener*/
+  // Give each tab an event listener
   tabs.forEach((tab, index) => {
     tab.addEventListener("click", () => {
       showSlide(index);
