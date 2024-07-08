@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="base.css" />
    
     <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="slideshow.css" />
 
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -18,6 +19,7 @@
     />
 
     <script defer src="index.js"></script>
+    <script defer src="slideshow.js"></script>
 
   </head>
   <body>
@@ -62,11 +64,31 @@
           As a student, I chase the bounds of computing. I hope that as a veteran,
           I will push them further yet.
         </p>
-        <img src="https://placehold.co/400"/>
+        <img src="https://placehold.co/400" alt="Authors headshot"/>
       </header>
       
       <section id="narrative" class="slice">
         <h2 class="highlight-first">Narrative</h2>
+
+        <!-- Slideshow -->
+        <div class="slides fade">
+          <img src="https://placehold.co/400" alt="Lorem ipsum">
+        </div>
+
+        <div class="slides fade">
+          <img src="https://placehold.co/400" alt="Lorem ipsum">
+        </div>
+
+        <div class="slides fade">
+          <img src="https://placehold.co/400" alt="Lorem ipsum">
+        </div>
+
+        <div id="slideshow-nav">
+          <button class="tabs"></button>
+          <button class="tabs"></button>
+          <button class="tabs"></button>
+        </div>
+        
         <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ducimus, nulla animi impedit magni est similique quos numquam ut! Adipisci error minima deleniti nisi laudantium animi ipsam numquam maxime illum quis.</p>
       </section>
 
