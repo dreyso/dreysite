@@ -132,8 +132,11 @@ main {
   margin-top: 70px;
 }
 
-.slice p, .slice h1, .slice h2, .slice h3, .slice ul {
+.slice > p, .slice > h1, .slice > h2, .slice > h3, .slice > ul {
   margin: 20px 20px;
 }
 
+.slice > div {
+  margin: 20px 0px;
+}
 
