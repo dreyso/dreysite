@@ -100,10 +100,6 @@ nav,
 section {
   display: block;
 }
-body {
-  font-size: 1em;
-  line-height: 1.1em;
-}
 ol,
 ul {
   list-style: square;
@@ -142,21 +138,21 @@ button {
 }
 
 h1 {
-  font-size: 42px;
+  font-size: clamp(42px, calc(4vw * 1.618 * 1.618), 72px);
   line-height: 1.3;
   letter-spacing: -0.02em;
   font-weight: bolder;
 }
 
 h2 {
-  font-size: 26px;
+  font-size: clamp(22px, calc(4vw * 1.618), 42px); 
   line-height: 1.3;
   letter-spacing: -0.02em;
   font-weight: bold;
 }
 
 h3 {
-  font-size: 1rem;
+  font-size: clamp(1rem, 4vw, 22px);
   line-height: 1.5;
   font-weight: bolder;
 }
@@ -169,3 +165,33 @@ img {
   width: 100%;
   height: auto;
 }
+
+:root {
+  --main: #a2106d;  
+  --font: 'Montserrat', 'Roboto', sans-serif;
+}
+
+/* Set default values */
+body {
+  line-height: 1.5; 
+  font-family: var(--font);
+  font-size: 16px;
+  color: white;
+  background-color: black;
+}
+
+* {
+  box-sizing: border-box;
+  color: inherit;
+  font-family: inherit;
+  font-size: inherit;
+  line-height: inherit;
+  background-color: inherit;
+  transition: inherit;
+}
+
+::selection {
+  background: white;
+  color: black;
+}
+

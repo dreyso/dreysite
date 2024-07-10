@@ -1,10 +1,10 @@
 document.addEventListener("DOMContentLoaded", () => {
-  const navToggle = document.querySelector("#nav-toggle");
-  const mobileMenu = document.querySelector("#mobile-menu");
-  const icon = document.querySelector("#menu-icon");
+  const menuToggle = document.querySelector("#mobile-menu-toggle");
+  const menu = document.querySelector("#mobile-menu");
+  const icon = document.querySelector("#mobile-menu-icon");
 
-  navToggle.addEventListener('click', () => {
-      mobileMenu.classList.toggle("mobile-menu-open");
+  menuToggle.addEventListener('click', () => {
+    menu.classList.toggle("mobile-menu-open");
       icon.classList.toggle("menu-button-clicked");
 
       icon.src = icon.src.endsWith('img/menu-closed.svg') 

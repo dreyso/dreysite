@@ -1,32 +1,3 @@
-* {
-  box-sizing: border-box;
-  color: inherit;
-  font-family: inherit;
-  font-size: inherit;
-  line-height: inherit;
-  background-color: inherit;
-  transition: inherit;
-}
-
-::selection {
-  background: white;
-  color: black;
-}
-
-:root {
-  --main: #a2106d;  
-  --font: 'Montserrat', 'Roboto', sans-serif;
-}
-
-/* Set default values */
-body {
-  line-height: 1.5; 
-  font-family: var(--font);
-  font-size: 16px;
-  color: white;
-  background-color: black;
-}
-
 main {
   width: 100%;
   height: 100%;
@@ -59,8 +30,8 @@ main {
   margin: 20px 20px;
 }
 
-#menu-icon {
-  width: 40px;
+#mobile-menu-icon {
+  width: 45px;
   margin: 20px 20px;
 }
 
@@ -96,7 +67,7 @@ main {
   margin-top: 10px; /* Vertical space between nav menu tabs */
 }
 
-.cont {
+.mobile-menu-item {
   display: flex;
   align-items: center;
   color: black;
@@ -119,7 +90,7 @@ main {
   color: black !important;
  }
 
-.active-link .cont {
+.active-link .mobile-menu-item {
   background-color: var(--main);
   color: white;
 
@@ -129,16 +100,19 @@ main {
   border-right-color: var(--main);
 }
 
-.slice {
+.main-section {
   height: fit-content;
   margin-top: 70px;
 }
 
-.slice > p, .slice > h1, .slice > h2, .slice > h3, .slice > ul {
+.main-section > p, .main-section > h1, .main-section > h2, .main-section > h3, .main-section > ul {
   margin: 20px 20px;
 }
 
-.slice > div {
+.main-section > div {
   margin: 20px 0px;
 }
 
+/* Tablet view */
+
+/*@media (min-width: 780px) {}*/
