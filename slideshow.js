@@ -3,7 +3,6 @@ document.addEventListener("DOMContentLoaded", () => {
   const slideshow = document.querySelector(".slideshow");
   const images = slideshow.querySelectorAll("img");
   const firstImgWidth = images[0].offsetWidth;
-  const totalSlides = images.length;
   let isDragging = false, startX, scrollLeft, slideIndex = 0;
 
   // Highlight active tab, scroll to active slide
@@ -26,7 +25,7 @@ document.addEventListener("DOMContentLoaded", () => {
   // Cursor or touch slide
   const manualSlide = () => {
     const positionDiff = Math.abs(slideshow.scrollLeft - scrollLeft);
-    if (positionDiff > firstImgWidth / totalSlides) {
+    if (positionDiff > 0) {
       slideIndex += slideshow.scrollLeft > scrollLeft ? 1 : -1;
     }
     slideIndex = Math.max(0, Math.min(slideIndex, images.length - 1));
