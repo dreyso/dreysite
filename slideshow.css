@@ -16,15 +16,18 @@
   }
 
   .tab {
-    height: 10px;
-    width: 50px;
-    margin: 0 2px;
+    height: 5px;
+    width: 15%;
     background-color: white;
-    border-radius: 1px;
     display: inline-block;
     transition: background-color 0.6s ease;
   }
   
-  .active, .tab:hover {
+  .tab:hover {
+    background-color: var(--main);
+    opacity: 50%;
+  }
+
+  .active {
     background-color: var(--main);
   }
