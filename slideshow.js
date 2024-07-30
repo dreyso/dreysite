@@ -1,27 +1,61 @@
 document.addEventListener("DOMContentLoaded", () => {
-  const slides = document.querySelectorAll(".slides");
-  const tabs = document.querySelectorAll(".tabs");
+  const tabs = document.querySelectorAll(".tab");
+  const slideshow = document.querySelector(".slideshow");
+  const images = slideshow.querySelectorAll("img");
+  const firstImgWidth = images[0].offsetWidth;
+  const totalSlides = images.length;
+  let isDragging = false, startX, scrollLeft, slideIndex = 0;
 
-  // Display only the active slide and highlight only the active tab
-  function showSlide(slideIndex) {
-    slides.forEach((slide, index) => {
-      slide.style.display = (index === slideIndex) ? "block" : "none";
-    });
+  // Highlight active tab, scroll to active slide
+  const updateTabs = (index) => {
+    tabs.forEach((tab, i) => tab.classList.toggle("active", i === index));
+    slideshow.scrollTo({ left: index * firstImgWidth, behavior: 'smooth' });
+  };
 
-    tabs.forEach((tab, index) => {
-      tab.classList.toggle("active", index === slideIndex);
-    });
-  }
-
-  // Give each tab an event listener
+  // Give each tab a click event
   tabs.forEach((tab, index) => {
     tab.addEventListener("click", () => {
-      showSlide(index);
+      slideIndex = index;
+      updateTabs(index);
     });
   });
 
-  // Show default slide
-  let slideIndex = 0;
-  showSlide(slideIndex);
-});
+  // Set default tab/slide
+  updateTabs(slideIndex);
 
+  // Cursor or touch slide
+  const manualSlide = () => {
+    const positionDiff = Math.abs(slideshow.scrollLeft - scrollLeft);
+    if (positionDiff > firstImgWidth / totalSlides) {
+      slideIndex += slideshow.scrollLeft > scrollLeft ? 1 : -1;
+    }
+    slideIndex = Math.max(0, Math.min(slideIndex, images.length - 1));
+    updateTabs(slideIndex);
+  };
+
+  const startDrag = (e) => {
+    isDragging = true;
+    startX = e.pageX || e.touches[0].pageX;
+    scrollLeft = slideshow.scrollLeft;
+  };
+
+  const onDrag = (e) => {
+    if (!isDragging) return;
+    e.preventDefault();
+    const x = e.pageX || e.touches[0].pageX;
+    slideshow.scrollLeft = scrollLeft - (x - startX);
+  };
+
+  const stopDrag = () => {
+    if (!isDragging) return;
+    isDragging = false;
+    manualSlide();
+  };
+
+  slideshow.addEventListener("mousedown", startDrag);
+  slideshow.addEventListener("touchstart", startDrag);
+  document.addEventListener("mousemove", onDrag);
+  document.addEventListener("touchmove", onDrag);
+  document.addEventListener("mouseup", stopDrag);
+  document.addEventListener("touchend", stopDrag);
+});
