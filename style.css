@@ -113,6 +113,16 @@ main {
   margin: 20px 0px;
 }
 
+.icon {
+  width: 20px;
+  margin-left: 20px;
+  display: inline;
+}
+
+#copyright {
+  font-size: 12px;
+}
+
 /* Tablet view */
 
 /*@media (min-width: 780px) {}*/
