@@ -30,79 +30,79 @@ main {
   margin: 20px 20px;
 }
 
-#mobile-menu-icon {
-  width: 45px;
-  margin: 20px 20px;
-}
+@media (max-width: 779px) {
+  #mobile-menu-icon {
+    width: 45px;
+    margin: 20px 20px;
+  }
 
-.menu-button-clicked {
-  background-color: white;
-  border-radius: 5px;
-}
+  .menu-button-clicked {
+    background-color: white;
+    border-radius: 5px;
+  }
 
-/* Mobile menu styling */
+  /* Mobile menu styling */
+  #mobile-menu {
+    position: fixed;
+    visibility: hidden;
+    background-color: transparent;
+    width: fit-content;
+    height: fit-content;
+    top: 93px; /* Derived from experimentation, banner height is set to logo height */
+    right: -300px;
+    transition: all 0.1s ease;
+    z-index: 1;
+  }
 
-#mobile-menu {
-  position: fixed;
-  visibility: hidden;
-  background-color: transparent;
-  width: fit-content;
-  height: fit-content;
-  top: 93px; /* Derived from experimentation, banner height is set to logo height */
-  right: -300px;
-  transition: all 0.1s ease;
-  z-index: 1;
-}
+  .mobile-menu-open {
+    visibility: visible !important;
+    transform: translate(-300px) !important;
+  }
 
-.mobile-menu-open {
-  visibility: visible !important;
-  transform: translate(-300px) !important;
-}
+  #mobile-menu a {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    transition: all 0.1s ease;
+    margin-top: 10px; /* Vertical space between nav menu tabs */
+  }
 
-#mobile-menu a {
-  display: flex;
-  flex-direction: row;
-  width: 100%;
-  transition: all 0.1s ease;
-  margin-top: 10px; /* Vertical space between nav menu tabs */
-}
+  .mobile-menu-item {
+    display: flex;
+    align-items: center;
+    color: black;
+    font-size: 1.2em;
+    font-weight: bold;
+    background-color: white;
+    width: 100%;
+    padding-right: 20px; /* Extra length for nav menu tabs */
+  }
 
-.mobile-menu-item {
-  display: flex;
-  align-items: center;
-  color: black;
-  font-size: 1.2em;
-  font-weight: bold;
-  background-color: white;
-  width: 100%;
-  padding-right: 20px; /* Extra length for nav menu tabs */
-}
+  .triangle {
+    width: auto;
+    height: auto;
+    border-top: 30px solid transparent; /* Sum of top and bottom = height */
+    border-bottom: 30px solid transparent;
+    border-right: 20px solid white; /* triangle width */
+  }
 
-.triangle {
-  width: auto;
-  height: auto;
-  border-top: 30px solid transparent; /* Sum of top and bottom = height */
-  border-bottom: 30px solid transparent;
-  border-right: 20px solid white; /* triangle width */
-}
+  .active-link span::first-letter {
+    color: black !important;
+  }
 
-.active-link span::first-letter{
-  color: black !important;
- }
+  .active-link .mobile-menu-item {
+    background-color: var(--main);
+    color: white;
+  }
 
-.active-link .mobile-menu-item {
-  background-color: var(--main);
-  color: white;
-
-}
-
-.active-link .triangle {
-  border-right-color: var(--main);
+  .active-link .triangle {
+    border-right-color: var(--main);
+  }
 }
 
 .main-section {
   height: fit-content;
-  margin-top: 70px;
+  margin-top: 100px;
 }
 
 .main-section > p, .main-section > h1, .main-section > h2, .main-section > h3, .main-section > ul {
@@ -119,10 +119,39 @@ main {
   display: inline;
 }
 
-#copyright {
+footer {
   font-size: 12px;
 }
 
 /* Tablet view */
+@media (min-width: 780px) {
+  #mobile-menu-toggle {
+    display: none;
+  }
 
-/*@media (min-width: 780px) {}*/
+  #mobile-menu {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    background-color: transparent;
+    width: 70%;
+    padding-right: 20px;
+  }
+
+  .mobile-menu-item {
+    display: flex; /* Doesn't do anything, but ::first-letter doesn't work otherwise */
+    font-size: 1.2em;
+    font-weight: bold;
+    border-radius: 2px;
+    padding: 8px 8px;
+  }
+
+  .mobile-menu-item:hover {
+    background-color: white;
+    color: black;
+  }
+
+  .triangle {
+    display: none;
+  }
+}
