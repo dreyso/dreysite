@@ -1,0 +1,121 @@
+/* Banner styling */
+#banner {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: min-content;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  z-index: 1;
+  letter-spacing: -0.02em; /* Better presentation, no readability needed */
+}
+
+#logo {
+  width: 50px;
+  margin: 15px 20px;
+}
+
+#mobile-menu {
+  transition: all 0.2s ease;
+}
+
+/* Mobile menu breaks at 850px */
+@media (max-width: 849px) {
+    #mobile-menu-icon {
+      width: 45px;
+      margin: 15px 20px;
+    }
+  
+    .menu-button-clicked {
+      background-color: white;
+      border-radius: 5px;
+    }
+  
+    /* Mobile menu styling */
+    #mobile-menu {
+      position: fixed;
+      visibility: hidden;
+      background-color: transparent;
+      width: fit-content;
+      height: fit-content;
+      top: 93px; /* Derived from experimentation, banner height is set to logo height */
+      right: -300px;
+    }
+  
+    .mobile-menu-open {
+      visibility: visible !important;
+      transform: translate(-300px) !important;
+    }
+  
+    #mobile-menu a {
+      display: flex;
+      flex-direction: row;
+      width: 100%;
+      margin-top: 10px; /* Vertical space between nav menu tabs */
+    }
+  
+    .mobile-menu-item {
+      display: flex;
+      align-items: center;
+      color: black;
+      font-size: 1.2em;
+      font-weight: bold;
+      background-color: white;
+      width: 100%;
+      padding-right: 20px; /* Extra length for nav menu tabs */
+    }
+  
+    .triangle {
+      width: auto;
+      height: auto;
+      border-top: 30px solid transparent; /* Sum of top and bottom = height */
+      border-bottom: 30px solid transparent;
+      border-right: 20px solid white; /* triangle width */
+    }
+  
+    .active-link span::first-letter {
+      color: black !important;
+    }
+  
+    .active-link .mobile-menu-item {
+      background-color: var(--main);
+      color: white;
+    }
+  
+    .active-link .triangle {
+      border-right-color: var(--main);
+    }
+}
+
+  /* Wide screen */
+@media (min-width: 850px) {
+    #mobile-menu-toggle {
+      display: none;
+    }
+  
+    #mobile-menu {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-evenly;
+      background-color: transparent;
+      width: 70%;
+      padding-right: 20px;
+    }
+  
+    .mobile-menu-item {
+      display: flex; /* Doesn't do anything, but ::first-letter doesn't work otherwise */
+      font-size: 1.2em;
+      font-weight: bold;
+    }
+  
+    .mobile-menu-item:hover {
+      font-size: 32px;
+    }
+  
+    .triangle {
+      display: none;
+    }
+}
+  

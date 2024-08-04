@@ -1,7 +1,6 @@
 main {
   width: 100%;
   height: 100%;
-  margin-top: 120px; /* Spacer between head banner and page */
 }
 
 .highlight {
@@ -12,146 +11,87 @@ main {
   color: var(--main);
 }
 
-/* Banner styling */
-#banner {
-  position: fixed;
-  top: 0;
-  width: 100%;
-  height: min-content;
+.icon-wrapper {
   display: flex;
-  align-items: center;
   justify-content: space-between;
-  z-index: 1;
-  transition: all 0.5s ease;
+  width: 120px;
 }
 
-#logo {
-  width: 50px;
-  margin: 20px 20px;
-}
-
-@media (max-width: 779px) {
-  #mobile-menu-icon {
-    width: 45px;
-    margin: 20px 20px;
-  }
-
-  .menu-button-clicked {
-    background-color: white;
-    border-radius: 5px;
-  }
-
-  /* Mobile menu styling */
-  #mobile-menu {
-    position: fixed;
-    visibility: hidden;
-    background-color: transparent;
-    width: fit-content;
-    height: fit-content;
-    top: 93px; /* Derived from experimentation, banner height is set to logo height */
-    right: -300px;
-    transition: all 0.1s ease;
-    z-index: 1;
-  }
-
-  .mobile-menu-open {
-    visibility: visible !important;
-    transform: translate(-300px) !important;
-  }
-
-  #mobile-menu a {
-    display: flex;
-    flex-direction: row;
-    width: 100%;
-    transition: all 0.1s ease;
-    margin-top: 10px; /* Vertical space between nav menu tabs */
-  }
-
-  .mobile-menu-item {
-    display: flex;
-    align-items: center;
-    color: black;
-    font-size: 1.2em;
-    font-weight: bold;
-    background-color: white;
-    width: 100%;
-    padding-right: 20px; /* Extra length for nav menu tabs */
-  }
-
-  .triangle {
-    width: auto;
-    height: auto;
-    border-top: 30px solid transparent; /* Sum of top and bottom = height */
-    border-bottom: 30px solid transparent;
-    border-right: 20px solid white; /* triangle width */
-  }
-
-  .active-link span::first-letter {
-    color: black !important;
-  }
-
-  .active-link .mobile-menu-item {
-    background-color: var(--main);
-    color: white;
-  }
-
-  .active-link .triangle {
-    border-right-color: var(--main);
-  }
-}
-
-.main-section {
-  height: fit-content;
-  margin-top: 100px;
-}
-
-.main-section > p, .main-section > h1, .main-section > h2, .main-section > h3, .main-section > ul {
-  margin: 20px 20px;
-}
-
-.main-section > div {
-  margin: 20px 0px;
-}
-
-.icon {
+.icon-wrapper img {
   width: 20px;
-  margin-left: 20px;
-  display: inline;
 }
 
 footer {
   font-size: 12px;
 }
 
-/* Tablet view */
-@media (min-width: 780px) {
-  #mobile-menu-toggle {
-    display: none;
+/* Small screen */
+@media (max-width: 699px) {
+
+  .main-section {
+    height: fit-content;
+    margin-top: 100px;
   }
 
-  #mobile-menu {
+  .main-section p, .main-section h1, .main-section h2, .main-section h3, .main-section ul {
+    margin: 20px 20px;
+  }
+
+  .main-section > div {
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+
+  .icon-wrapper {
+    margin-left: 20px;
+  }
+}
+
+/* Wide screen */
+@media (min-width: 700px) {
+  html, body {
     display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
-    background-color: transparent;
-    width: 70%;
-    padding-right: 20px;
+    justify-content: center;
+    align-items: center;
   }
 
-  .mobile-menu-item {
-    display: flex; /* Doesn't do anything, but ::first-letter doesn't work otherwise */
-    font-size: 1.2em;
-    font-weight: bold;
-    border-radius: 2px;
-    padding: 8px 8px;
+  .main-section {
+    margin: 0px 20px;
+    height: fit-content;
+    margin-top: 120px;
+  }
+  
+  .main-section > div {
+    margin: 20px 0px;
   }
 
-  .mobile-menu-item:hover {
-    background-color: white;
-    color: black;
+  #abode {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto 1fr auto;
+    grid-template-areas: 
+        "portrait greeting"
+        "portrait greeting"
+        "quote quote";
+    align-items: center;
   }
 
-  .triangle {
-    display: none;
+  #abode .wrapper {
+    grid-area: greeting;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  #abode h1 {
+    margin: 0 auto;
+    width: min-content;
+  }
+
+  #abode p {
+    grid-area: quote;
+    margin: 0 auto;
+    width: 50%; /* Adjust width as needed */
+    margin: 20% auto;
   }
 }
