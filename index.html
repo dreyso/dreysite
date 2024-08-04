@@ -8,6 +8,7 @@
     <link rel="icon" href="img/logo.svg" type="image/svg">
     <link rel="stylesheet" href="base.css" />
    
+    <link rel="stylesheet" href="nav.css" />
     <link rel="stylesheet" href="style.css" />
     <link rel="stylesheet" href="slideshow.css" />
 
@@ -56,16 +57,17 @@
 
     <main>    
       <header id="abode" class="main-section">
-        <h1>
-          Hi, <br />
-          I'm <span class="highlight">Andrey</span>
-        </h1>
-
-        <p>
-          As a student, I chase the bounds of computing. I hope that as a veteran,
-          I will push them further yet.
-        </p>
+        <div class="wrapper">
+            <h1>
+              Hi, <br />
+              I'm <span class="highlight">Andrey</span>
+            </h1>
+            
+        </div>
         <img src="img/abode.png" alt="Authors headshot"/>
+        <p>As a student, I chase the bounds of computing. I hope that as a veteran,
+          I will push them further yet.
+          </p>
       </header>
       
       <section id="narrative" class="main-section">
@@ -129,10 +131,10 @@
       
       <section id="yours" class="main-section">
         <h2 class="highlight-first">Yours</h2>
-        <div>
-          <button id="copy-email-button"><img src="img/gmail.png" class="icon" title="adreysco@gmail.com"/></button>
-          <a href="https://www.linkedin.com/in/adreyso"><img src="img/linkedin.png" class="icon" title="Linkedin"/></a>
-          <a href="assets/resume.pdf"><img src="img/resume.png" class="icon" title="Resume"/></a>
+        <div class="icon-wrapper">
+          <button id="copy-email-button"><img src="img/gmail.png" title="adreysco@gmail.com"/></button>
+          <a href="https://www.linkedin.com/in/adreyso"><img src="img/linkedin.png" title="Linkedin"/></a>
+          <a href="assets/resume.pdf"><img src="img/resume.png" title="Resume"/></a>
         </div>
       </section>
       <footer class="main-section">
