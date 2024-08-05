@@ -51,6 +51,7 @@ footer {
 @media (min-width: 700px) {
   html, body {
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
   }
@@ -58,7 +59,7 @@ footer {
   .main-section {
     margin: 0px 20px;
     height: fit-content;
-    margin-top: 120px;
+    margin-top: 100px;
   }
   
   .main-section > div {
@@ -73,25 +74,24 @@ footer {
         "portrait greeting"
         "portrait greeting"
         "quote quote";
-    align-items: center;
+
   }
 
   #abode .wrapper {
     grid-area: greeting;
-    display: flex;
-    justify-content: center;
-    align-items: center;
   }
 
   #abode h1 {
     margin: 0 auto;
     width: min-content;
+    position: sticky;
+    top: 0;
   }
 
   #abode p {
     grid-area: quote;
     margin: 0 auto;
-    width: 50%; /* Adjust width as needed */
+    width: 50%;
     margin: 20% auto;
   }
 }
