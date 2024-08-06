@@ -66,14 +66,16 @@ footer {
     margin-top: 100px;
   }
 
-  #abode {
-    margin-top: 150px;
-  }
-  
   .main-section > div {
     margin: 20px 0px;
   }
 
+  /* Abode */
+
+  #abode {
+    margin-top: 150px;
+  }
+  
   #abode {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -99,7 +101,7 @@ footer {
   #abode p {
     grid-area: quote;
     margin: 0 auto;
-    width: 55%;
+    width: 60%;
     font-size: clamp(16px, 2vw, 26px);
     margin: 55vh auto;
   }
@@ -107,4 +109,35 @@ footer {
   #narrative {
   margin-top: 0px;
   }
+
+  /* Narrative */
+  #narrative {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto auto;
+    grid-template-areas: 
+        "header      header"
+        "description slideshow";
+    gap: 20px;
+  }
+
+  #narrative h2 {
+    grid-area: header;
+  }
+
+  #narrative .wrapper {
+    grid-area: slideshow;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  #narrative p {
+    grid-area: description;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
 }
