@@ -33,6 +33,10 @@ footer {
     margin-top: 100px;
   }
 
+  #abode {
+    margin-top: 150px; /* Landing page starts lower */
+  }
+
   .main-section p, .main-section h1, .main-section h2, .main-section h3, .main-section ul {
     margin: 20px 20px;
   }
@@ -60,6 +64,10 @@ footer {
     margin: 0px 20px;
     height: fit-content;
     margin-top: 100px;
+  }
+
+  #abode {
+    margin-top: 150px;
   }
   
   .main-section > div {
@@ -91,7 +99,12 @@ footer {
   #abode p {
     grid-area: quote;
     margin: 0 auto;
-    width: 50%;
-    margin: 20% auto;
+    width: 55%;
+    font-size: clamp(16px, 2vw, 26px);
+    margin: 55vh auto;
+  }
+
+  #narrative {
+  margin-top: 0px;
   }
 }
