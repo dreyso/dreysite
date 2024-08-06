@@ -1,4 +1,3 @@
-/* Banner styling */
 #banner {
   width: 100%;
   position: fixed;
@@ -9,7 +8,7 @@
   justify-content: space-between;
   z-index: 1;
   letter-spacing: -0.02em; /* Better presentation, no readability needed */
-  transition: top 0.2s; /* Smooth transition for the top property */
+  transition: top 0.2s; /* For hiding/showing */
 }
 
 #logo {
@@ -17,11 +16,11 @@
   margin: 15px 20px;
 }
 
-#mobile-menu {
+#nav-menu {
   transition: all 0.2s ease;
 }
 
-/* Mobile menu breaks at 850px */
+/* Mobile menu */
 @media (max-width: 849px) {
     #mobile-menu-icon {
       width: 45px;
@@ -33,8 +32,7 @@
       border-radius: 5px;
     }
   
-    /* Mobile menu styling */
-    #mobile-menu {
+    #nav-menu {
       position: fixed;
       background-color: transparent;
       width: fit-content;
@@ -43,14 +41,14 @@
       right: 0;
     }
   
-    #mobile-menu a {
+    #nav-menu a {
       display: flex;
       flex-direction: row;
       width: 100%;
       margin-top: 10px; /* Vertical space between nav menu tabs */
     }
   
-    .mobile-menu-item {
+    .nav-item {
       display: flex;
       align-items: center;
       color: black;
@@ -69,27 +67,27 @@
       border-right: 20px solid white; /* triangle width */
     }
   
-    .active-link span::first-letter {
+    .active-bookmark span::first-letter {
       color: black !important;
     }
   
-    .active-link .mobile-menu-item {
+    .active-bookmark .nav-item {
       background-color: var(--main);
       color: white;
     }
   
-    .active-link .triangle {
+    .active-bookmark .triangle {
       border-right-color: var(--main);
     }
 }
 
-  /* Wide screen */
+/* Wide screen */
 @media (min-width: 850px) {
     #mobile-menu-toggle {
       display: none;
     }
   
-    #mobile-menu {
+    #nav-menu {
       display: flex;
       flex-direction: row;
       align-items: center;
@@ -99,13 +97,13 @@
       padding-right: 20px;
     }
   
-    .mobile-menu-item {
+    .nav-item {
       display: flex; /* Doesn't do anything, but ::first-letter doesn't work otherwise */
       font-size: 1.2em;
       font-weight: bold;
     }
   
-    .mobile-menu-item:hover {
+    .nav-item:hover {
       font-size: 32px;
     }
   
