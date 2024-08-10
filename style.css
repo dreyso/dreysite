@@ -89,13 +89,16 @@ footer {
 
   #abode .wrapper {
     grid-area: greeting;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
 
   #abode h1 {
-    margin: 0 auto;
     width: min-content;
-    position: sticky;
-    top: 0;
+    transform: translateX(-35%);  
+    background: transparent;
+    font-size: 10vw;
   }
 
   #abode p {
@@ -103,7 +106,7 @@ footer {
     margin: 0 auto;
     width: 60%;
     font-size: clamp(16px, 2vw, 26px);
-    margin: 55vh auto;
+    margin: 20vh auto;
   }
 
   #narrative {
@@ -139,5 +142,4 @@ footer {
     justify-content: center;
     align-items: center;
   }
-
 }
