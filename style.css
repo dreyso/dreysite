@@ -73,18 +73,15 @@ footer {
   /* Abode */
 
   #abode {
-    margin-top: 150px;
-  }
-  
-  #abode {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: auto 1fr auto;
     grid-template-areas: 
-        "portrait greeting"
-        "portrait greeting"
-        "quote quote";
+        "portrait greeting";
+  }
 
+  #abode img {
+    z-index: 1;
+    box-shadow: -5px 5px 15px rgba(0, 0, 0, 0.99);
   }
 
   #abode .wrapper {
@@ -99,14 +96,22 @@ footer {
     transform: translateX(-35%);  
     background: transparent;
     font-size: 10vw;
+    z-index: 2;
   }
 
-  #abode p {
-    grid-area: quote;
+  #transition1 {
+    background-color: #202020;
+    transform: translateY(-20%);
+    width: 100%;
+    height: fit-content;
+    padding: 15vw 0;
+  }
+
+  #transition1 p {
     margin: 0 auto;
     width: 60%;
     font-size: clamp(16px, 2vw, 26px);
-    margin: 20vh auto;
+    color: white;
   }
 
   #narrative {
@@ -117,15 +122,10 @@ footer {
   #narrative {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: auto auto;
     grid-template-areas: 
-        "header      header"
         "description slideshow";
-    gap: 20px;
-  }
+    margin-left: 5%; /*Fixes margin after transform*/ 
 
-  #narrative h2 {
-    grid-area: header;
   }
 
   #narrative .wrapper {
@@ -134,12 +134,46 @@ footer {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    transform: translate(-10%, 15%);
+    background: transparent;
   }
 
-  #narrative p {
+  #narrative .wrapper .slideshow {
+    box-shadow: -5px 5px 10px rgba(0, 0, 0, 0.3);
+  }
+
+  #narrative .wrapper .tab {
+    box-shadow: -5px 5px 10px rgba(0, 0, 0, 0.99);
+  }
+
+  #narrative .wrapper2 {
     grid-area: description;
     display: flex;
+    flex-direction: column;
+    background-color: #dddddd;
+    color: black;
+    font-size: clamp(16px, 2vw, 26px);
+    padding: 20px;
+    padding-right: 15%;
+  }
+
+  #narrative .wrapper2 h2 {
+    margin-bottom: 20%;
+
+  }
+
+  #details {
+    background-color: #202020;
+    padding: 300px 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
+  }
+
+  #yours {
+    background-color: #202020;
+
   }
 }
