@@ -60,20 +60,21 @@
 
     <main>    
       <header id="abode" class="main-section">
-        <div class="wrapper">
+        <div class="upper-wrapper">
+          <div class="wrapper">
             <h1>
               Hi, <br />
               I'm <span class="highlight">Andrey</span>
             </h1>
-        </div>
-        <img src="img/abode.png" alt="Authors headshot"/>
-      </header>
-
-      <div id="transition1">
-        <p>As a student, I chase the bounds of computing. As a veteran,
-          I will push them further yet.
-        </p>
+          </div>
+          <img src="img/abode.png" alt="Authors headshot"/>
       </div>
+        <div class="lower-wrapper">
+          <p>As a student, I chase the bounds of computing. As a veteran,
+            I will push them further yet.
+          </p>
+        </div>
+      </header>
       
       <section id="narrative" class="main-section">
         
@@ -84,7 +85,7 @@
               <img src="https://placehold.co/400" alt="Lorem ipsum" draggable="false">
           </div>
 
-          <div id="slideshow-nav">
+          <div class="slideshow-nav">
             <button class="tab"></button>
             <button class="tab"></button>
             <button class="tab"></button>
@@ -114,8 +115,9 @@
 
       <section id="records" class="main-section">
         <h2 class="highlight-first">Records</h2>
-        <h3>
-          Software Engineering Intern, Portland State Aerospace Society,
+        <div class="wrapper">
+          <h3>
+            Software Engineering Intern, Portland State Aerospace Society,
           Portland, OR 6/2023 - 10/2023<br />
           Software for OreSat 0.5, Oregon’s second satellite.
         </h3>
@@ -131,6 +133,26 @@
             photos.
           </li>
         </ul>
+          </div>
+        <div class="wrapper">
+        <h3>
+          Backend Developer, Electronics Prototyping Lab, Portland State University,
+          Portland, OR 6/2023 - 10/2023<br />
+          PRUSA Slicer Software.
+        </h3>
+        <ul>
+          <li>
+            Created a REST API to simplify command delivery and testing,
+            allowing PSAS to send and receive commands through web browsers,
+            improving accessibility and usability.
+          </li>
+          <li>
+            Contributed to the OreSat Linux App Framework (OLAF), completing the
+            star tracker app to determine attitude and capture Earth and space
+            photos.
+          </li>
+        </ul>
+        </div>
       </section>
 
       <section id="endeavors" class="main-section">
@@ -147,7 +169,7 @@
 
         </div>
       </section>
-      <footer class="main-section">
+      <footer>
         <p>© 2024 Andrey Steblyakov. All Rights Reserved.</p>
       </footer>
     </main>
