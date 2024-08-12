@@ -62,13 +62,8 @@ footer {
   }
 
   .main-section {
-    margin: 0px 20px;
+    padding: 10% 10%;
     height: fit-content;
-    margin-top: 100px;
-  }
-
-  .main-section > div {
-    margin: 20px 0px;
   }
 
   /* Abode */
@@ -78,11 +73,14 @@ footer {
     grid-template-columns: 1fr 1fr;
     grid-template-areas: 
         "portrait greeting";
+    padding-bottom: 0;
+    padding-top: 3%; /* Accommodate img translation */
   }
 
   #abode img {
     z-index: 1;
     box-shadow: -5px 5px 15px rgba(0, 0, 0, 0.99);
+    transform: translateY(10%);  
   }
 
   #abode .wrapper {
@@ -94,7 +92,7 @@ footer {
 
   #abode h1 {
     width: min-content;
-    transform: translateX(-35%);  
+    transform: translate(-35%, 10%);  
     background: transparent;
     font-size: 10vw;
     z-index: 2;
@@ -102,21 +100,15 @@ footer {
 
   #transition1 {
     background-color: #202020;
-    transform: translateY(-20%);
     width: 100%;
     height: fit-content;
-    padding: 15vw 0;
+    padding: 10% 0;
   }
 
   #transition1 p {
     margin: 0 auto;
     width: 60%;
-    font-size: clamp(16px, 2vw, 26px);
     color: white;
-  }
-
-  #narrative {
-  margin-top: 0px;
   }
 
   /* Narrative */
@@ -125,8 +117,7 @@ footer {
     grid-template-columns: 1fr 1fr;
     grid-template-areas: 
         "description slideshow";
-    margin-left: 5%; /*Fixes margin after transform*/ 
-
+    padding-bottom: 0;
   }
 
   #narrative .wrapper {
@@ -137,6 +128,7 @@ footer {
     align-items: center;
     transform: translate(-10%, 15%);
     background: transparent;
+    z-index: 1;
   }
 
   #narrative .wrapper .slideshow {
@@ -153,7 +145,6 @@ footer {
     flex-direction: column;
     background-color: #dddddd;
     color: black;
-    font-size: clamp(16px, 2vw, 26px);
     padding: 20px;
     padding-right: 15%;
   }
@@ -164,20 +155,25 @@ footer {
   }
 
   #details {
+    position: relative;
     background-color: #202020;
-    padding: 300px 0;
-    margin: 0;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    box-shadow: 0px -5px 5px rgba(0, 0, 0, 0.3);
+    padding-top: 17%;
+    padding-bottom:  17%;
+
+    z-index: 0;
   }
+
+  #details hr {
+    width:50%;
+  }
+
 
   #yours {
     background-color: #202020;
-
-  }
-  .test {
-    width: 500px;
   }
 }
