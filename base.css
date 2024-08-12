@@ -169,6 +169,10 @@ img {
 :root {
   --main: #a2106d;  
   --font: 'Montserrat', 'Roboto', sans-serif;
+  --full-space: 10vw;
+  --minus-full-space: -10vw;
+  --half-space: 5vw;
+  --minus-half-space: -5vw;
 }
 
 /* Set default values */
@@ -176,17 +180,15 @@ body {
   line-height: 1.5; 
   font-family: var(--font);
   font-size: 16px;
-  color: white;
   background-color: black;
 }
 
 * {
   box-sizing: border-box;
-  color: inherit;
+  color: white;
   font-family: inherit;
   font-size: inherit;
   line-height: inherit;
-  background-color: inherit;
   transition: inherit;
 }
 
