@@ -9,6 +9,7 @@
   z-index: 3;
   letter-spacing: -0.02em; /* Better presentation, no readability needed */
   transition: top 0.2s; /* For hiding/showing */
+  background-color: black;
 }
 
 #logo {
