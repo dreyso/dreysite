@@ -14,7 +14,8 @@ main {
 .icon-wrapper {
   display: flex;
   justify-content: space-between;
-  width: 120px;
+  align-items: center;
+  width: 140px;
 }
 
 .icon-wrapper img {
@@ -175,5 +176,8 @@ footer {
   #yours {
     background-color: #202020;
 
+  }
+  .test {
+    width: 500px;
   }
 }
