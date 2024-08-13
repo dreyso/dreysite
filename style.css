@@ -110,6 +110,7 @@ footer {
     width: 100%;
     height: fit-content;
     padding: var(--full-space);
+    clip-path: polygon(0% 0%, 85% 0%, 90% 101%, 0 101%);
 }
 
 #abode .lower-wrapper p {
@@ -123,7 +124,7 @@ footer {
     grid-template-columns: 1fr 1fr;
     grid-template-areas: 
         "description slideshow";
-    padding-bottom: 0; /* Content overlap */ 
+    background-color: #202020;
   }
 
   #narrative .wrapper {
@@ -137,11 +138,11 @@ footer {
   }
 
   #narrative .slideshow {
-    box-shadow: -5px 5px 10px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.9);
   }
 
   #narrative .slideshow-nav {
-    box-shadow: -5px 5px 10px rgba(0, 0, 0, 0.6);
+    box-shadow: -0 0 15px rgba(0, 0, 0, 0.9);
   }
 
   #narrative .wrapper2 {
@@ -150,6 +151,7 @@ footer {
     flex-direction: column;
     background-color: #7a7a7a;
     padding: var(--half-space);
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.9);
   }
 
   #details {
@@ -159,7 +161,6 @@ footer {
     justify-content: center;
     align-items: center;
     background-color: #202020;
-    box-shadow: 0px -5px 5px rgba(0, 0, 0, 0.3);
     z-index: 0;
   }
 
@@ -168,11 +169,15 @@ footer {
   }
 
   #records {
-    background-color: #7a7a7a;
+  background-color: #7a7a7a;
+
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     gap: var(--half-space);
+    z-index: 1;
+    clip-path: polygon(0% 0%, 100% 10%, 100% 100%, 0 90%);
+
   }
 
   #records .wrapper {
