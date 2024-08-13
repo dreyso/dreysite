@@ -170,12 +170,14 @@ footer {
   #records {
     background-color: #7a7a7a;
     display: flex;
-    flex-flow: row wrap;
+    flex-direction: row;
+    flex-wrap: wrap;
     gap: var(--half-space);
   }
-  /* temp*/
+
   #records .wrapper {
-    width: 500px;
+    flex: 1;
+    min-width: 400px; 
   }
 
   #yours {
