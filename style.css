@@ -110,7 +110,7 @@ footer {
     width: 100%;
     height: fit-content;
     padding: var(--full-space);
-    clip-path: polygon(0% 0%, 85% 0%, 90% 101%, 0 101%);
+    clip-path: polygon(0% 0%, 85% 0%, 100% 101%, 0 101%);
 }
 
 #abode .lower-wrapper p {
@@ -169,15 +169,20 @@ footer {
   }
 
   #records {
+  position: relative;
   background-color: #7a7a7a;
 
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    gap: var(--half-space);
-    z-index: 1;
-    clip-path: polygon(0% 0%, 100% 10%, 100% 100%, 0 90%);
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: var(--half-space);
+  z-index: 1;
+  clip-path: polygon(0% 0%, 100% 10%, 100% 100%, 0 90%);
+  z-index: 1;
+  }
 
+  #records-background {
+    background: linear-gradient(180deg, #202020, #202020 50%, black 50%);
   }
 
   #records .wrapper {
