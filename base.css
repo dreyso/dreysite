@@ -168,6 +168,8 @@ img {
 
 :root {
   --main: #a2106d;  
+  --light: #7a7a7a;
+  --dark: #202020;
   --font: 'Montserrat', 'Roboto', sans-serif;
   --full-space: 10vw;
   --minus-full-space: -10vw;
@@ -181,13 +183,14 @@ body {
   font-family: var(--font);
   font-size: 16px;
   background-color: black;
+  color: white;
 }
 
 * {
   box-sizing: border-box;
-  color: white;
   font-family: inherit;
   font-size: inherit;
+  color: inherit;
   line-height: inherit;
   transition: inherit;
 }
