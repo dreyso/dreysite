@@ -59,15 +59,8 @@
     font-weight: bold;
     background-color: white;
     width: 100%;
-    padding-right: 20px; /* Extra length for nav menu tabs */
-  }
-
-  .triangle {
-    width: auto;
-    height: auto;
-    border-top: 30px solid transparent; /* Sum of top and bottom = height */
-    border-bottom: 30px solid transparent;
-    border-right: 20px solid white; /* triangle width */
+    padding: 15px 25px;
+    clip-path: polygon(0 50%, 13% 0, 100% 0, 100% 100%, 13% 100%);
   }
 
   .active-bookmark span::first-letter {
@@ -77,10 +70,6 @@
   .active-bookmark .nav-item {
     background-color: var(--main);
     color: white;
-  }
-
-  .active-bookmark .triangle {
-    border-right-color: var(--main);
   }
 }
 
@@ -108,9 +97,5 @@
 
   .nav-item:hover {
     font-size: 32px;
-  }
-
-  .triangle {
-    display: none;
   }
 }
