@@ -20,97 +20,97 @@
 
 #nav-menu {
   transition: all 0.2s ease;
+  visibility: hidden;
 }
 
 /* Mobile menu */
 @media (max-width: 849px) {
-    #mobile-menu-icon {
-      width: 45px;
-      margin: 15px 20px;
-    }
-  
-    .menu-button-clicked {
-      background-color: white;
-      border-radius: 5px;
-    }
-  
-    #nav-menu {
-      position: fixed;
-      background-color: transparent;
-      width: fit-content;
-      height: fit-content;
-      top: 0; /* Position set in js */
-      right: 0;
-    }
-  
-    #nav-menu a {
-      display: flex;
-      flex-direction: row;
-      width: 100%;
-      margin-top: 10px; /* Vertical space between nav menu tabs */
-    }
-  
-    .nav-item {
-      display: flex;
-      align-items: center;
-      color: black;
-      font-size: 1.2em;
-      font-weight: bold;
-      background-color: white;
-      width: 100%;
-      padding-right: 20px; /* Extra length for nav menu tabs */
-    }
-  
-    .triangle {
-      width: auto;
-      height: auto;
-      border-top: 30px solid transparent; /* Sum of top and bottom = height */
-      border-bottom: 30px solid transparent;
-      border-right: 20px solid white; /* triangle width */
-    }
-  
-    .active-bookmark span::first-letter {
-      color: black !important;
-    }
-  
-    .active-bookmark .nav-item {
-      background-color: var(--main);
-      color: white;
-    }
-  
-    .active-bookmark .triangle {
-      border-right-color: var(--main);
-    }
+  #mobile-menu-icon {
+    width: 45px;
+    margin: 15px 20px;
+  }
+
+  .menu-button-clicked {
+    background-color: white;
+    border-radius: 5px;
+  }
+
+  #nav-menu {
+    position: fixed;
+    background-color: transparent;
+    width: fit-content;
+    height: fit-content;
+    top: 0; /* Position set in js */
+    right: 0;
+  }
+
+  #nav-menu a {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    margin-top: 10px; /* Vertical space between nav menu tabs */
+  }
+
+  .nav-item {
+    display: flex;
+    align-items: center;
+    color: black;
+    font-size: 1.2em;
+    font-weight: bold;
+    background-color: white;
+    width: 100%;
+    padding-right: 20px; /* Extra length for nav menu tabs */
+  }
+
+  .triangle {
+    width: auto;
+    height: auto;
+    border-top: 30px solid transparent; /* Sum of top and bottom = height */
+    border-bottom: 30px solid transparent;
+    border-right: 20px solid white; /* triangle width */
+  }
+
+  .active-bookmark span::first-letter {
+    color: black !important;
+  }
+
+  .active-bookmark .nav-item {
+    background-color: var(--main);
+    color: white;
+  }
+
+  .active-bookmark .triangle {
+    border-right-color: var(--main);
+  }
 }
 
 /* Wide screen */
 @media (min-width: 850px) {
-    #mobile-menu-toggle {
-      display: none;
-    }
-  
-    #nav-menu {
-      display: flex;
-      flex-direction: row;
-      align-items: center;
-      justify-content: space-evenly;
-      background-color: transparent;
-      width: 70%;
-      padding-right: 20px;
-    }
-  
-    .nav-item {
-      display: flex; /* Doesn't do anything, but ::first-letter doesn't work otherwise */
-      font-size: 1.2em;
-      font-weight: bold;
-    }
-  
-    .nav-item:hover {
-      font-size: 32px;
-    }
-  
-    .triangle {
-      display: none;
-    }
+  #mobile-menu-toggle {
+    display: none;
+  }
+
+  #nav-menu {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+    background-color: transparent;
+    width: 70%;
+    padding-right: 20px;
+  }
+
+  .nav-item {
+    display: flex; /* Doesn't do anything, but ::first-letter doesn't work otherwise */
+    font-size: 1.2em;
+    font-weight: bold;
+  }
+
+  .nav-item:hover {
+    font-size: 32px;
+  }
+
+  .triangle {
+    display: none;
+  }
 }
-  
