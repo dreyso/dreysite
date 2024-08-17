@@ -105,7 +105,6 @@ footer p {
 
   #narrative .wrapper {
     flex-direction: column-reverse;
-    transform: translateY(var(--full-space));
   }
 
   #narrative .slideshow,
@@ -116,7 +115,7 @@ footer p {
   #narrative .wrapper2 {
     display: flex;
     flex-direction: column;
-    padding: 20vw var(--half-space) 10vw;
+    padding: var(--half-space) var(--half-space) var(--full-space);
     background-color: var(--light);
   }
 
@@ -144,14 +143,13 @@ footer p {
 
   #records {
     gap: var(--half-space);
-    padding: 35vw var(--half-space);
     background-color: var(--light);
-    clip-path: polygon(0% 0%, 100% 10%, 100% 100%, 0 90%);
+    clip-path: polygon(0% 0%, 100% 3%, 100% 100%, 0 97%);
   }
 
   #records .wrapper {
     flex: 1;
-    min-width: 270px;
+    min-width: 300px;
   }
   #endeavors {
     gap: var(--half-space);
