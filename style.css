@@ -188,6 +188,11 @@ h2 {
     padding: 5vw 10vw;
   }
 
+  hr {
+    width: 75%;
+    max-width: 800px;
+  }
+
   /* Abode */
   #abode {
     padding: 5vw 0 0 0;
@@ -231,10 +236,6 @@ h2 {
     background-color: var(--dark);
   }
 
-  #details hr {
-    width: 75%;
-  }
-
   #records-background {
     background: linear-gradient(
       180deg,
@@ -265,10 +266,6 @@ h2 {
 
   #yours {
     background-color: var(--dark);
-  }
-
-  #yours hr {
-    width: 75%;
   }
 }
 
