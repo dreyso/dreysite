@@ -45,31 +45,24 @@
   }
 
   #nav-menu a {
-    display: flex;
-    flex-direction: row;
     width: 100%;
     margin-top: 10px; /* Vertical space between nav menu tabs */
-  }
-
-  .nav-item {
-    display: flex;
-    align-items: center;
+    display: block;
     color: black;
     font-size: 1.2em;
     font-weight: bold;
     background-color: white;
-    width: 100%;
     padding: 15px 25px;
     clip-path: polygon(0 50%, 13% 0, 100% 0, 100% 100%, 13% 100%);
   }
 
-  .active-bookmark span::first-letter {
+  .active-bookmark::first-letter {
     color: black !important;
   }
 
-  .active-bookmark .nav-item {
-    background-color: var(--main);
-    color: white;
+  .active-bookmark {
+    background-color: var(--main) !important;
+    color: white !important;
   }
 }
 
@@ -89,13 +82,13 @@
     padding-right: 20px;
   }
 
-  .nav-item {
-    display: flex; /* Doesn't do anything, but ::first-letter doesn't work otherwise */
+  #nav-menu a {
+    display: block;
     font-size: 1.2em;
     font-weight: bold;
   }
 
-  .nav-item:hover {
+  #nav-menu a:hover {
     font-size: 32px;
   }
 }
