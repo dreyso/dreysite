@@ -46,9 +46,14 @@ h2 {
   gap: 1vw;
 }
 
+#abode .upper-wrapper img,
 #narrative .slideshow,
 #narrative .slideshow-nav {
   box-shadow: 0 0 15px rgba(0, 0, 0, 0.9);
+}
+
+#records-background {
+  background: linear-gradient(180deg, var(--dark), var(--dark) 50%, black 50%);
 }
 
 /* Mobile view */
@@ -72,7 +77,6 @@ h2 {
   }
 
   #abode .upper-wrapper img {
-    box-shadow: -5px 5px 15px rgba(0, 0, 0, 0.99);
     z-index: 1;
     transform: translateY(5vw);
   }
@@ -117,15 +121,6 @@ h2 {
     width: 100%;
   }
 
-  #records-background {
-    background: linear-gradient(
-      180deg,
-      var(--dark),
-      var(--dark) 50%,
-      black 50%
-    );
-  }
-
   #records {
     background-color: var(--light);
     clip-path: polygon(0% 0%, 100% 3%, 100% 100%, 0 97%);
@@ -155,7 +150,6 @@ h2 {
 
 /* Tablet view */
 @media (min-width: 700px) and (max-width: 1199px) {
-  /* Narrative */
   #narrative {
     background-color: var(--dark);
     padding: 0;
@@ -193,7 +187,6 @@ h2 {
     max-width: 800px;
   }
 
-  /* Abode */
   #abode {
     padding: 5vw 0 0 0;
   }
@@ -207,7 +200,6 @@ h2 {
 
   #abode .upper-wrapper img {
     grid-area: portrait;
-    box-shadow: -5px 5px 15px rgba(0, 0, 0, 0.99);
     z-index: 1;
     transform: translateY(5vw);
   }
@@ -234,15 +226,6 @@ h2 {
   #details {
     padding: 10vw 5vw;
     background-color: var(--dark);
-  }
-
-  #records-background {
-    background: linear-gradient(
-      180deg,
-      var(--dark),
-      var(--dark) 50%,
-      black 50%
-    );
   }
 
   #records {
@@ -289,7 +272,7 @@ h2 {
     justify-content: start;
     padding: 5vw;
     background-color: var(--light);
-    box-shadow: 0 0 15px rgba(0, 0, 0, 0.9);
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.99);
   }
 
   #endeavors {
