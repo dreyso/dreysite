@@ -138,14 +138,18 @@ button {
 }
 
 h1 {
-  font-size: clamp(42px, calc(4vw * 1.618 * 1.618), 160px); /* Max comes from experiementation*/
+  font-size: clamp(
+    42px,
+    calc(4vw * 1.618 * 1.618),
+    160px
+  ); /* Max comes from experiementation*/
   line-height: 1.3;
   letter-spacing: -0.02em;
   font-weight: bolder;
 }
 
 h2 {
-  font-size: clamp(22px, calc(4vw * 1.618), 42px); 
+  font-size: clamp(22px, calc(4vw * 1.618), 42px);
   line-height: 1.3;
   letter-spacing: -0.02em;
   font-weight: bold;
@@ -167,19 +171,15 @@ img {
 }
 
 :root {
-  --main: #a2106d;  
+  --main: #a2106d;
   --light: #7a7a7a;
   --dark: #202020;
-  --font: 'Montserrat', 'Roboto', sans-serif;
-  --full-space: 10vw;
-  --minus-full-space: -10vw;
-  --half-space: 5vw;
-  --minus-half-space: -5vw;
+  --font: "Montserrat", "Roboto", sans-serif;
 }
 
 /* Set default values */
 body {
-  line-height: 1.5; 
+  line-height: 1.5;
   font-family: var(--font);
   font-size: 16px;
   background-color: black;
@@ -199,4 +199,3 @@ body {
   background: white;
   color: black;
 }
-
