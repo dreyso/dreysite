@@ -23,25 +23,27 @@
 
 .stretch {
   opacity: 0;
-  transform: scaleX(0); /* Start with scale 0 on the x-axis */
-  transform-origin: center; /* Optional: Define the origin of the scaling */
+  transform: scaleX(0);
+  transform-origin: center;
   transition: opacity 0.6s ease-out, transform 0.6s ease-out;
 }
 
 .stretch.activated {
   opacity: 1;
-  transform: scaleX(1); /* Scale to 1 on the x-axis */
+  transform: scaleX(1);
 }
 
 .scan-left {
-  opacity: 0; /* Initially hidden */
-  clip-path: inset(0 100% 0 0); /* Initially hide the element by clipping it */
-  transition: opacity 1s ease-out, clip-path 1s ease-out;
+  opacity: 0;
+  mask-image: linear-gradient(to right, black 0%, black 50%, transparent 50%);
+  mask-size: 200% 100%;
+  mask-position: 100% 0;
+  transition: opacity 1s ease-out, mask-position 1s ease-out;
 }
 
 .scan-left.activated {
-  opacity: 1; /* Fade in */
-  clip-path: inset(0 0 0 0); /* Reveal the element (fully visible) */
+  opacity: 1;
+  mask-position: 0 0;
 }
 
 /* on page load*/
@@ -77,7 +79,7 @@
 }
 
 .expand {
-  animation: expand 0.5s ease-out forwards;
+  animation: expand 1s ease-out forwards;
   will-change: transform, opacity;
 }
 
