@@ -27,9 +27,9 @@ window.addEventListener("load", () => {
 
     icon.classList.toggle("menu-button-clicked");
 
-    icon.src = icon.src.endsWith("img/menu-closed.svg")
-      ? "img/menu-open.svg"
-      : "img/menu-closed.svg";
+    icon.src = icon.src.endsWith("assets/icons/menu-closed.svg")
+      ? "assets/icons/menu-open.svg"
+      : "assets/icons/menu-closed.svg";
   });
 
   setMenuPos(); // On page load
