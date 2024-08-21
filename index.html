@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="nav.css" />
     <link rel="stylesheet" href="style.css" />
     <link rel="stylesheet" href="slideshow.css" />
+    <link rel="stylesheet" href="animate.css" />
 
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -23,36 +24,46 @@
     <script defer src="copyEmail.js"></script>
     <script defer src="bookmark.js"></script>
     <script defer src="slideshow.js"></script>
+    <script defer src="animate.js"></script>
   </head>
   <body>
     <header id="banner">
       <a href="#"
-        ><img src="img/logo.svg" id="logo" title="Andrey Steblyakov"
+        ><img
+          src="img/logo.svg"
+          id="logo"
+          class="expand"
+          title="Andrey Steblyakov"
       /></a>
-      <button id="mobile-menu-toggle">
+      <button id="mobile-menu-toggle" class="expand">
         <img src="img/menu-closed.svg" id="mobile-menu-icon" />
       </button>
       <nav id="nav-menu">
-        <a href="#abode" class="highlight-first"> Abode </a>
-        <a href="#narrative" class="highlight-first"> Narrative </a>
-        <a href="#details" class="highlight-first"> Details </a>
-        <a href="#records" class="highlight-first"> Records </a>
-        <a href="#endeavors" class="highlight-first"> Endeavors </a>
-        <a href="#yours" class="highlight-first"> Yours </a>
+        <a href="#abode" class="highlight-first fall-in-place"> Abode </a>
+        <a href="#narrative" class="highlight-first fall-in-place">
+          Narrative
+        </a>
+        <a href="#details" class="highlight-first fall-in-place"> Details </a>
+        <a href="#records" class="highlight-first fall-in-place"> Records </a>
+        <a href="#endeavors" class="highlight-first fall-in-place">
+          Endeavors
+        </a>
+        <a href="#yours" class="highlight-first fall-in-place"> Yours </a>
       </nav>
     </header>
 
     <main>
       <header id="abode" class="main-section">
         <div class="upper-wrapper centered">
-          <h1>
+          <h1 class="fall-in-place">
             Hi, <br />
-            I'm <span class="highlight">Andrey</span>
+            I'm
+            <span class="highlight">Andrey</span>
           </h1>
-          <img src="img/abode.png" alt="Authors headshot" />
+          <img src="img/abode.png" class="fade-down" alt="Authors headshot" />
         </div>
         <div class="lower-wrapper centered">
-          <p>
+          <p class="animate scan-left">
             As a student, I chase the bounds of computing. As a veteran, I will
             push them further yet.
           </p>
@@ -75,14 +86,14 @@
             />
           </div>
 
-          <div class="slideshow-nav">
+          <div class="slideshow-nav animate stretch">
             <button class="tab"></button>
             <button class="tab"></button>
             <button class="tab"></button>
           </div>
         </div>
 
-        <div class="text-wrapper centered">
+        <div class="text-wrapper centered animate scan-left">
           <h2 class="highlight-first">Narrative</h2>
           <p>
             Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ducimus,
@@ -94,24 +105,24 @@
       </section>
 
       <section id="details" class="main-section centered">
-        <h2 class="highlight-first">Details</h2>
+        <h2 class="highlight-first animate fade">Details</h2>
         <hr />
-        <ul>
+        <ul class="animate fade">
           <li>PSU | 2024 | summa cum laude</li>
           <li>Bachelors in Computer Science</li>
-          <li>C, C++, Python</li>
+          <li>C | C++ | Python</li>
           <li>Web dev (CSS Grid | Flexbox | JS)</li>
-          <li>Flask, SQL</li>
-          <li>Visual Studio | Visual Studio Code | Vim</li>
+          <li>Flask | SQL</li>
+          <li>Visual Studio | VS Code | Vim</li>
           <li>Git</li>
           <li>Native Russian speaker</li>
         </ul>
       </section>
 
       <section id="records" class="main-section centered">
-        <h2 class="highlight-first">Records</h2>
+        <h2 class="highlight-first animate fade">Records</h2>
         <div class="content-wrapper centered">
-          <div class="text-wrapper centered">
+          <div class="text-wrapper centered animate scan-left">
             <h3>
               Software Engineering Intern, Portland State Aerospace Society,
               Portland, OR 6/2023 - 10/2023<br />
@@ -130,7 +141,7 @@
               </li>
             </ul>
           </div>
-          <div class="text-wrapper centered">
+          <div class="text-wrapper centered animate scan-left">
             <h3>
               Backend Developer, Electronics Prototyping Lab, Portland State
               University, Portland, OR 6/2023 - 10/2023<br />
@@ -152,7 +163,7 @@
         </div>
       </section>
 
-      <section id="endeavors" class="main-section centered">
+      <section id="endeavors" class="main-section centered animate fade-up">
         <h2 class="highlight-first">Endeavors</h2>
         <img
           src="https://placehold.co/400"
@@ -189,7 +200,7 @@
         </div>
       </section>
 
-      <section id="yours" class="main-section centered">
+      <section id="yours" class="main-section centered animate fade-up">
         <h2 class="highlight-first">Yours</h2>
         <hr />
 
