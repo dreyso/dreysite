@@ -33,6 +33,10 @@ h2 {
   background-color: var(--dark);
 }
 
+#narrative .slideshow-wrapper {
+  z-index: 1;
+}
+
 #details {
   background-color: var(--dark);
   padding: 10vw 5vw;
@@ -86,6 +90,7 @@ footer p {
   .main-section {
     padding: 15vw 5vw;
     position: relative;
+    height: fit-content;
   }
 
   #abode {
@@ -94,13 +99,15 @@ footer p {
 
   #abode .upper-wrapper img {
     z-index: 1;
-    transform: translateY(5vw);
+    position: relative;
+    top: 5vw;
   }
 
   #abode .upper-wrapper h1 {
     font-size: 14vw;
     z-index: 2;
-    transform: translateY(15vw);
+    position: relative;
+    top: 15vw;
     text-align: center;
   }
 
@@ -165,7 +172,8 @@ footer p {
 
   #narrative .slideshow-wrapper {
     padding-inline: 20vw;
-    transform: translateY(10vw);
+    position: relative;
+    top: 10vw;
   }
 
   #narrative .text-wrapper {
@@ -188,6 +196,7 @@ footer p {
   .main-section {
     padding: 5vw 10vw;
     position: relative;
+    height: fit-content;
   }
 
   hr {
@@ -209,7 +218,8 @@ footer p {
   #abode .upper-wrapper img {
     grid-area: portrait;
     z-index: 1;
-    transform: translateY(5vw);
+    position: relative;
+    top: 5vw;
   }
 
   #abode .upper-wrapper h1 {
@@ -217,18 +227,28 @@ footer p {
     width: min-content;
     font-size: 10vw;
     z-index: 2;
-    transform: translate(-10vw, 5vw);
+    position: relative;
+    top: 5vw;
+    left: -10vw;
   }
 
   #abode .lower-wrapper {
     width: 100%;
-    padding: 10vw 10vw 5vw 10vw;
+    padding: 15vw 10vw 5vw 10vw;
     background-color: var(--dark);
-    clip-path: polygon(0% 0%, 85% 0%, 100% 101%, 0 101%);
   }
 
   #abode .lower-wrapper p {
     display: inline-block;
+    padding: 30px 30px;
+    border: 1px solid transparent;
+    border-image: linear-gradient(
+      to left,
+      white 0%,
+      white 50%,
+      transparent 50%
+    );
+    border-image-slice: 1;
   }
 
   #records {
@@ -265,7 +285,9 @@ footer p {
 
   #narrative .slideshow-wrapper {
     grid-area: slideshow;
-    transform: translate(-5vw, 5vw);
+    position: relative;
+    top: 5vw;
+    left: -5vw;
   }
 
   #narrative .text-wrapper {
