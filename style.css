@@ -44,7 +44,6 @@ h2 {
 
 #records {
   background-color: var(--light);
-  transform: translateZ(0); /* Trigger hardware acceleration */
 }
 
 #records::before {
@@ -53,7 +52,6 @@ h2 {
   width: 100%;
   height: 100%;
   background-color: var(--dark);
-  transform: translateZ(0); /* Trigger hardware acceleration */
 }
 
 #yours {
