@@ -27,14 +27,15 @@ h2 {
 #narrative .slideshow,
 #narrative .slideshow-nav {
   box-shadow: 0 0 15px rgba(0, 0, 0, 0.9);
+  z-index: 1;
+}
+
+#narrative .slideshow {
+  border: 10px solid white;
 }
 
 #narrative {
   background-color: var(--dark);
-}
-
-#narrative .slideshow-wrapper {
-  z-index: 1;
 }
 
 #details {
