@@ -69,6 +69,7 @@ h2 {
 .icon-wrapper img {
   width: 1.3vw;
   min-width: 20px;
+  transition: width 0.2s ease;
 }
 
 footer {
@@ -320,5 +321,9 @@ footer p {
 
   #endeavors .centered {
     grid-area: desc;
+  }
+
+  .icon-wrapper img:hover {
+    width: 2.5vw;
   }
 }
