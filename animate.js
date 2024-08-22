@@ -17,10 +17,21 @@ document.addEventListener("DOMContentLoaded", function () {
     observer.observe(element);
   });
 
-  // fall
-  const elements = document.querySelectorAll(".fall-in-place");
+  /* The scan-left animation uses a mask, which hides box-shadows, so the mask needs to go after the animation is done */
+  const elements = document.querySelectorAll(".scan-left");
 
-  elements.forEach((element, index) => {
+  elements.forEach((element) => {
+    element.addEventListener("transitionend", function () {
+      element.style.maskImage = "none";
+      element.style.maskSize = "none";
+      element.style.maskPosition = "none";
+    });
+  });
+
+  // Fall in place animation
+  const elements1 = document.querySelectorAll(".fall-in-place");
+
+  elements1.forEach((element, index) => {
     const duration = 1 + index * 0.1; // Start at 1s, increase by 0.1s for each element
     element.style.animationDuration = `${duration}s`;
   });
