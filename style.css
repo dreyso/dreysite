@@ -191,6 +191,10 @@ footer p {
   #endeavors img {
     max-width: 600px;
   }
+
+  #endeavors .centered {
+    max-width: 600px;
+  }
 }
 
 /* Desktop View */
@@ -322,6 +326,7 @@ footer p {
 
   #endeavors .centered {
     grid-area: desc;
+    align-items: start;
   }
 
   .icon-wrapper img:hover {
