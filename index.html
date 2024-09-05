@@ -28,15 +28,27 @@
   </head>
   <body>
     <header id="banner">
-      <a href="#"
-        ><img
+      <a href="#">
+        <img
           src="assets/icons/logo.svg"
           id="logo"
           class="expand"
           title="Andrey Steblyakov"
-      /></a>
-      <button id="mobile-menu-toggle" class="expand">
-        <img src="assets/icons/menu-closed.svg" id="mobile-menu-icon" />
+          alt="Andrey Steblyakov logo"
+        />
+      </a>
+      <button
+        id="mobile-menu-toggle"
+        class="expand"
+        aria-controls="mobile-menu"
+        aria-expanded="false"
+        aria-label="Open mobile menu"
+      >
+        <img
+          src="assets/icons/menu-closed.svg"
+          id="mobile-menu-icon"
+          alt="Menu icon"
+        />
       </button>
       <nav id="nav-menu">
         <a href="#abode" class="highlight-first fall-in-place"> Abode </a>
@@ -83,29 +95,29 @@
               src="assets/imgs/grad.webp"
               height="2500"
               width="2325"
-              alt="Lorem ipsum"
+              alt="Image of author in graduation gown"
               draggable="false"
             />
             <img
               src="assets/imgs/snow.webp"
               height="2500"
               width="2325"
-              alt="Lorem ipsum"
+              alt="Image of author in on the slopes"
               draggable="false"
             />
             <img
               src="assets/imgs/bike.webp"
               height="2500"
               width="2325"
-              alt="Lorem ipsum"
+              alt="Image of a sports bike"
               draggable="false"
             />
           </div>
 
           <div class="slideshow-nav animate stretch">
-            <button class="tab"></button>
-            <button class="tab"></button>
-            <button class="tab"></button>
+            <button class="tab" role="tab" aria-label="Slide 1"></button>
+            <button class="tab" role="tab" aria-label="Slide 2"></button>
+            <button class="tab" role="tab" aria-label="Slide 3"></button>
           </div>
         </div>
 
@@ -190,8 +202,8 @@
       <section id="endeavors" class="main-section centered animate fade-up">
         <h2 class="highlight-first">Endeavors</h2>
         <img
-          src="https://placehold.co/400"
-          alt="Lorem ipsum"
+          src="assets/imgs/demo.png"
+          alt="Image of a 2d polygon map"
           draggable="false"
         />
         <div class="centered">
@@ -230,17 +242,29 @@
 
         <div class="icon-wrapper">
           <button id="copy-email-button">
-            <img src="assets/icons/mail.svg" title="adreysco@gmail.com" />
+            <img
+              src="assets/icons/mail.svg"
+              title="adreysco@gmail.com"
+              alt="Email icon"
+            />
           </button>
-          <a href="https://github.com/dreyso"
-            ><img src="assets/icons/git.svg"
-          /></a>
-          <a href="https://www.linkedin.com/in/adreyso"
-            ><img src="assets/icons/linkedin.svg" title="Linkedin"
-          /></a>
-          <a href="assets/resume.pdf"
-            ><img src="assets/icons/resume.svg" title="Resume"
-          /></a>
+          <a href="https://github.com/dreyso">
+            <img src="assets/icons/git.svg" alt="GitHub icon" />
+          </a>
+          <a href="https://www.linkedin.com/in/adreyso">
+            <img
+              src="assets/icons/linkedin.svg"
+              title="LinkedIn"
+              alt="LinkedIn icon"
+            />
+          </a>
+          <a href="assets/resume.pdf">
+            <img
+              src="assets/icons/resume.svg"
+              title="Resume"
+              alt="Resume icon"
+            />
+          </a>
         </div>
       </section>
       <footer class="centered">
