@@ -1,0 +1,24 @@
+main {
+  width: 100%;
+  height: 100%;
+}
+
+.highlight {
+  color: var(--main);
+  display: inline-block; /* Forces wrapping behavior */
+
+}
+
+.highlight-first::first-letter {
+  color: var(--main);
+}
+
+footer {
+  width: 100%;
+  font-size: 12px;
+  padding: 5vw 10vw;
+}
+
+footer p {
+  display: inline-block;
+}

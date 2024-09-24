@@ -1,9 +1,8 @@
-import "./base.css";
-import "./style.css";
+import "./sections.css";
 import Slideshow from './slideshow';
-import grad from "./assets/imgs/grad.webp"
-import snow from "./assets/imgs/snow.webp"
-import bike from "./assets/imgs/bike.webp"
+import grad from "../assets/imgs/grad.webp"
+import snow from "../assets/imgs/snow.webp"
+import bike from "../assets/imgs/bike.webp"
 
 function Narrative() {
   const images = [

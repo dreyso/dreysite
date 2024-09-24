@@ -1,6 +1,5 @@
-import "./base.css";
-import "./style.css";
-import headshot from "./assets/imgs/abode.webp"
+import "./sections.css";
+import headshot from "../assets/imgs/abode.webp"
 
 function Abode() {
   return (

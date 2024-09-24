@@ -1,10 +1,9 @@
 import React, { useEffect, useRef } from "react";
-import "./base.css";
-import "./style.css";
 import { FaGithub } from "react-icons/fa";
 import { FaLinkedin } from "react-icons/fa";
 import { FaImagePortrait } from "react-icons/fa6";
 import { IoIosMail } from "react-icons/io";
+import "./sections.css";
 
 function Yours() {
   const copyButtonRef = useRef(null);

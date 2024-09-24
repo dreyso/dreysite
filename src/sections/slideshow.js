@@ -1,6 +1,4 @@
 import React, { useEffect, useRef, useState } from "react";
-import "./base.css";
-import "./style.css";
 import "./slideshow.css";
 
 function Slideshow({ images }) {

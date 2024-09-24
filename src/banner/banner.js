@@ -1,5 +1,4 @@
 import React, { useEffect, useState, useRef } from "react";
-import "../base.css";
 import "./banner.css";
 import MobileMenuToggle from "./mobileMenuToggle";
 import Navigation from "./navigation";

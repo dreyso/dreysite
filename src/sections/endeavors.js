@@ -1,6 +1,5 @@
-import "./base.css";
-import "./style.css";
-import sparky from "./assets/imgs/demo.png"
+import "./sections.css";
+import sparky from "../assets/imgs/demo.png"
 
 function Endeavors() {
   return (

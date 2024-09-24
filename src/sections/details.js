@@ -1,5 +1,4 @@
-import "./base.css";
-import "./style.css";
+import "./sections.css";
 
 function Details() {
   return (
