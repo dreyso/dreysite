@@ -5,6 +5,8 @@ main {
 
 .highlight {
   color: var(--main);
+  display: inline-block; /* Forces wrapping behavior */
+
 }
 
 .highlight-first::first-letter {

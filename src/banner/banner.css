@@ -19,15 +19,18 @@
 }
 
 #nav-menu {
-  transition: all 0.2s ease;
-  visibility: hidden;
+  transition: right 0.2s ease;
 }
 
 /* Mobile menu */
 @media (max-width: 849px) {
-  #mobile-menu-icon {
-    width: 45px;
+
+  #mobile-menu-toggle {
     margin: 15px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 5px;
   }
 
   .menu-button-clicked {
@@ -40,8 +43,6 @@
     background-color: transparent;
     width: fit-content;
     height: fit-content;
-    top: 0; /* Position set in js */
-    right: 0;
   }
 
   #nav-menu a {
