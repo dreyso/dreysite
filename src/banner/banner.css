@@ -23,7 +23,7 @@
 }
 
 /* Mobile menu */
-@media (max-width: 849px) {
+@media (max-width: 1099px) {
 
   #mobile-menu-toggle {
     margin: 15px 20px;
@@ -57,18 +57,18 @@
     clip-path: polygon(0 50%, 13% 0, 100% 0, 100% 100%, 13% 100%);
   }
 
-  .active-bookmark::first-letter {
+  .active-nav-tab::first-letter {
     color: black !important;
   }
 
-  .active-bookmark {
+  .active-nav-tab {
     background-color: var(--main) !important;
     color: white !important;
   }
 }
 
 /* Wide screen */
-@media (min-width: 850px) {
+@media (min-width: 1100px) {
   #banner > a {
     transition: transform 0.5s ease; /* Smooth rotation */
   }
@@ -99,6 +99,10 @@
   }
 
   #nav-menu a:hover {
-    font-size: 32px;
+    font-size: 26px;
+  }
+
+  .active-nav-tab {
+    font-size: 32px !important;
   }
 }
