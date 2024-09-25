@@ -95,6 +95,7 @@
     display: block;
     font-size: 1.2em;
     font-weight: bold;
+    transition: font-size 0.2s ease;
   }
 
   #nav-menu a:hover {
