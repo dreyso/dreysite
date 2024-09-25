@@ -1,23 +1,17 @@
 import React, { useEffect, useState, useRef } from "react";
 import "./banner.css";
-import MobileMenuToggle from "./mobileMenuToggle";
-import Navigation from "./navigation";
+import NavToggle from "./navToggle";
+import Nav from "./nav";
 
-function Banner() {
+function Banner({ sections, sectionIds}) {
   const [menuVisible, setMenuVisible] = useState(false);
   const navRef = useRef(null);
   const bannerRef = useRef(null);
-  const sections = ["Abode", "Narrative", "Details", "Records", "Endeavors", "Yours"];
 
+  // Mobile nav show/hide action
   useEffect(() => {
-    const setMenuPos = () => {
-      if (navRef.current) {
-        navRef.current.style.right = menuVisible ? "0" : `-${navRef.current.offsetWidth}px`;
-        navRef.current.style.top = `${bannerRef.current.offsetHeight}px`;
-      }
-    };
-    
-    setMenuPos();
+    navRef.current.style.top = `${bannerRef.current.offsetHeight}px`;
+    navRef.current.style.right = menuVisible ? "0" : `-${navRef.current.offsetWidth}px`;
 
     const handleClickOutside = (event) => {
       if (menuVisible) setMenuVisible(false);
@@ -30,6 +24,7 @@ function Banner() {
     };
   }, [menuVisible]);
 
+  // Hide banner on scroll down, show on scroll up
   useEffect(() => {
     const banner = bannerRef.current;
     let ongoingTouch = false;
@@ -37,9 +32,7 @@ function Banner() {
 
     const handleScroll = () => {
       if (ongoingTouch) return;
-
       const scrollTop = window.scrollY || document.documentElement.scrollTop;
-
       banner.style.top = scrollTop > lastScrollTop ? `-${banner.offsetHeight}px` : `0`;
       lastScrollTop = scrollTop;
     };
@@ -63,50 +56,50 @@ function Banner() {
     };
   }, []);
 
+  // Highlight mobile nav tab that corresponds to the current page section
   useEffect(() => {
-    const sections = document.querySelectorAll(".main-section"); 
-    
     const navHighlighter = () => {
       let closestSection = null;
       let smallestDifference = Infinity;
-  
-      sections.forEach(current => {
-        const sectionTop = current.offsetTop;
-        const sectionId = current.getAttribute("id");
-        const difference = Math.abs(window.scrollY - sectionTop);
-  
-        if (difference < smallestDifference) {
-          smallestDifference = difference;
-          closestSection = sectionId;
+
+      sectionIds.forEach(sectionId => {
+        const sectionElement = document.getElementById(sectionId);
+        if (sectionElement) {
+          const sectionTop = sectionElement.offsetTop;
+          const difference = Math.abs(window.scrollY - sectionTop);
+
+          if (difference < smallestDifference) {
+            smallestDifference = difference;
+            closestSection = sectionId;
+          }
         }
       });
-  
+
       if (closestSection) {
-        document.querySelectorAll("#nav-menu a").forEach(link => {
-          link.classList.remove("active-bookmark");
+        Array.from(navRef.current.children).forEach(link => {
+          link.classList.remove("active-nav-tab");
         });
-  
-        const activeLink = document.querySelector(`#nav-menu a[href="#${closestSection}"]`);
+
+        const activeLink = navRef.current.querySelector(`a[href="#${closestSection}"]`);
         if (activeLink) {
-          activeLink.classList.add("active-bookmark");
+          activeLink.classList.add("active-nav-tab");
         }
       }
     };
-  
+
     window.addEventListener("scroll", navHighlighter);
-  
     return () => {
       window.removeEventListener("scroll", navHighlighter);
     };
-  }, []);
+  }, [sectionIds]);
 
   return (
     <header id="banner" ref={bannerRef}>
       <a href="#">
         <img src="/logo.svg" id="logo" title="Andrey Steblyakov" alt="Andrey Steblyakov logo" />
       </a>
-      <MobileMenuToggle menuVisible={menuVisible} onToggle={() => setMenuVisible(prev => !prev)} />
-      <Navigation sections={sections} ref={navRef} />
+      <NavToggle menuVisible={menuVisible} onToggle={() => setMenuVisible(prev => !prev)} />
+      <Nav sections={sections} ref={navRef} />
     </header>
   );
 }

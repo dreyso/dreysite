@@ -1,11 +1,12 @@
 import "./app.css";
 import Banner from "./banner/banner";
 import Sections from "./sections/sections";
+import { sections, sectionIds } from './sections/sections';
 
 function App() {
   return (
     <>
-      <Banner />
+      <Banner  sections={sections} sectionIds={sectionIds} />
       <main>
         <Sections />
         <footer className="centered">
@@ -17,3 +18,4 @@ function App() {
 }
 
 export default App;
+
