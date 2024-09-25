@@ -3,7 +3,6 @@ import { FaGithub } from "react-icons/fa";
 import { FaLinkedin } from "react-icons/fa";
 import { FaImagePortrait } from "react-icons/fa6";
 import { IoIosMail } from "react-icons/io";
-import "./sections.css";
 
 function Yours() {
   const copyButtonRef = useRef(null);
@@ -17,7 +16,7 @@ function Yours() {
           .catch((err) => console.error("Failed to copy email: ", err));
       });
     }
-  }, []); // Runs only once when component mounts
+  }, []);
 
   return (
     <section id="yours" className="main-section centered animate fade-up">

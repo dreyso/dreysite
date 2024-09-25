@@ -6,7 +6,6 @@ import Records from "./records";
 import Endeavors from "./endeavors";
 import Yours from "./yours";
 
-
 function Sections() {
     return (
         <>

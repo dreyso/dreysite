@@ -1,4 +1,3 @@
-import "./sections.css";
 import headshot from "../assets/imgs/abode.webp"
 
 function Abode() {

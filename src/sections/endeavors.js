@@ -1,4 +1,3 @@
-import "./sections.css";
 import sparky from "../assets/imgs/demo.png"
 
 function Endeavors() {

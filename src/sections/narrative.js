@@ -1,4 +1,3 @@
-import "./sections.css";
 import Slideshow from './slideshow';
 import grad from "../assets/imgs/grad.webp"
 import snow from "../assets/imgs/snow.webp"

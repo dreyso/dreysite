@@ -1,5 +1,3 @@
-import "./sections.css";
-
 function Records() {
   return (
     <section id="records" className="main-section centered">
