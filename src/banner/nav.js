@@ -1,6 +1,6 @@
 import React from "react";
 
-const Navigation = React.forwardRef(({ sections }, ref) => {
+const Nav = React.forwardRef(({ sections }, ref) => {
   return (
     <nav ref={ref} id="nav-menu">
       {sections.map((section) => (
@@ -12,4 +12,4 @@ const Navigation = React.forwardRef(({ sections }, ref) => {
   );
 });
 
-export default Navigation;
+export default Nav;

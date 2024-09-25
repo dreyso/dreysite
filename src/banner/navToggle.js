@@ -1,7 +1,7 @@
 import React from "react";
 import { MdMenuOpen, MdMenu } from "react-icons/md";
 
-const MobileMenuToggle = ({ menuVisible, onToggle }) => {
+const NavToggle = ({ menuVisible, onToggle }) => {
   return (
     <button
       id="mobile-menu-toggle"
@@ -16,4 +16,4 @@ const MobileMenuToggle = ({ menuVisible, onToggle }) => {
   );
 };
 
-export default MobileMenuToggle;
+export default NavToggle;
