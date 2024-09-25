@@ -293,6 +293,7 @@
   
     #endeavors h2 {
       grid-area: header;
+      text-align: center;
     }
   
     #endeavors img {
