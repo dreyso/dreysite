@@ -47,7 +47,7 @@
     justify-content: space-between;
     align-items: center;
     width: 25%;
-    min-width: 140px;
+    min-width: 200px;
   }
   
   /* Mobile view */
@@ -245,6 +245,14 @@
       flex: 1;
       min-width: 450px;
     }
+
+    .icon-wrapper > *{
+      transition: transform 0.2s ease;
+    }
+
+    .icon-wrapper > *:hover {
+      transform: scale(1.5);
+    }
   }
   
   /* Desktop View */
@@ -294,10 +302,6 @@
     #endeavors .centered {
       grid-area: desc;
       align-items: start;
-    }
-  
-    .icon-wrapper > * {
-      width: 2.5vw;
     }
   }
   
