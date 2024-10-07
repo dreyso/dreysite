@@ -33,6 +33,11 @@
     padding: 5px;
   }
 
+  .mobile-menu-icon{
+    width: 35px;
+    height: auto;
+  }
+
   .menu-button-clicked {
     background-color: white;
     border-radius: 5px;
@@ -69,14 +74,6 @@
 
 /* Wide screen */
 @media (min-width: 1100px) {
-  #banner > a {
-    transition: transform 0.5s ease; /* Smooth rotation */
-  }
-
-  #banner > a:hover {
-    transform: rotate(24deg); /* Rotate the logo 360 degrees on hover */
-  }
-
   #mobile-menu-toggle {
     display: none;
   }

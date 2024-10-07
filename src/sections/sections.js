@@ -15,14 +15,7 @@ export const sections = [
     "Yours"
 ];
 
-export const sectionIds = [
-    "abode",
-    "narrative",
-    "details",
-    "records",
-    "endeavors",
-    "yours"
-];
+export const sectionIds = sections.map(section => section.toLowerCase());
 
 function Sections() {
     return (

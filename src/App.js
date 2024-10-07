@@ -6,7 +6,7 @@ import { sections, sectionIds } from './sections/sections';
 function App() {
   return (
     <>
-      <Banner  sections={sections} sectionIds={sectionIds} />
+      <Banner sections={sections} sectionIds={sectionIds} />
       <main>
         <Sections />
         <footer className="centered">

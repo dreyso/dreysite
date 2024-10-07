@@ -11,7 +11,7 @@ const NavToggle = ({ menuVisible, onToggle }) => {
       aria-label="Open mobile menu"
       onClick={onToggle}
     >
-      {menuVisible ? <MdMenuOpen size={35} style={{ color: 'black' }} /> : <MdMenu size={35} />}
+      {menuVisible ? <MdMenuOpen className='mobile-menu-icon' style={{ color: 'black' }} /> : <MdMenu className='mobile-menu-icon' />}
     </button>
   );
 };
