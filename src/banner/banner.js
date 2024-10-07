@@ -74,7 +74,7 @@ function Banner({ sections, sectionIds}) {
       {...expandAnimation}
       whileHover={{ rotate: 25 }}>
         <img
-          src="/logo.svg"
+          src="./logo.svg"
           id="logo"
           title="Andrey Steblyakov"
           alt="Andrey Steblyakov logo"
