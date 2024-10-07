@@ -1,8 +1,27 @@
 import sparky from "../assets/imgs/demo.png"
+import { useRef } from 'react';
+import { motion, useInView } from 'framer-motion';
+
+const sectionVariants = {
+  hidden: { opacity: 0, y: 100 },
+  visible: {
+    opacity: 1,
+    y: 0, 
+    transition: { duration: 1, ease: "easeInOut" }
+  },
+};
 
 function Endeavors() {
+  const ref = useRef(null);
+  const isInView = useInView(ref, { once: true }); 
+
   return (
-    <section id="endeavors" className="main-section centered animate fade-up">
+    <motion.section id="endeavors" className="main-section centered animate fade-up"
+    ref={ref}
+    initial="hidden"
+    animate={isInView ? "visible" : "hidden"}
+    variants={sectionVariants}
+    >
       <h2 className="highlight-first">Endeavors</h2>
       <img
         src={sparky}
@@ -39,7 +58,7 @@ function Endeavors() {
           </li>
         </ul>
       </div>
-    </section>
+    </motion.section>
   );
 }
 

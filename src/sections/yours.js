@@ -3,8 +3,22 @@ import { FaGithub } from "react-icons/fa";
 import { FaLinkedin } from "react-icons/fa";
 import { FaImagePortrait } from "react-icons/fa6";
 import { IoIosMail } from "react-icons/io";
+import { motion, useInView } from 'framer-motion';
+
+
+const sectionVariants = {
+  hidden: { opacity: 0, y: 100 },
+  visible: {
+    opacity: 1,
+    y: 0, 
+    transition: { duration: 1, ease: "easeInOut" }
+  },
+};
 
 function Yours() {
+  const ref = useRef(null);
+  const isInView = useInView(ref, { once: true }); 
+  
   const copyButtonRef = useRef(null);
   const email = "adreysco@gmail.com";
 
@@ -19,7 +33,11 @@ function Yours() {
   }, []);
 
   return (
-    <section id="yours" className="main-section centered animate fade-up">
+    <motion.section id="yours" className="main-section centered animate fade-up"
+    ref={ref}
+    initial="hidden"
+    animate={isInView ? "visible" : "hidden"}
+    variants={sectionVariants}>
       <h2 className="highlight-first">Yours</h2>
       <hr />
 
@@ -37,7 +55,7 @@ function Yours() {
         <FaImagePortrait size={30}/>
         </a>
       </div>
-    </section>
+    </motion.section>
   );
 }
 

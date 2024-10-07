@@ -51,7 +51,6 @@ function Abode() {
           src={headshot}
           width="1812"
           height="2500"
-          className="fade-down"
           alt="Author's headshot"
           initial="hidden"
           animate="visible"

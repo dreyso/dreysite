@@ -1,7 +1,26 @@
 import React, { useEffect, useRef, useState } from "react";
+import { motion, useInView } from 'framer-motion';
 import "./slideshow.css";
 
+const textVariants = {
+  hidden: {
+    scaleX: 0, 
+    originX: 0.5,
+  },
+  visible: {
+    scaleX: 1, 
+    transition: { 
+      duration: 1, 
+      ease: "easeInOut",
+      opacity: { duration: 0.5 }, // Optional: Control opacity transition separately
+    }
+  },
+};
+
 function Slideshow({ images }) {
+  const ref = useRef(null);
+  const isInView = useInView(ref, { once: true }); 
+
   const slideshowRef = useRef(null);
   const tabsRef = useRef([]);
   const [slideIndex, setSlideIndex] = useState(0);
@@ -104,7 +123,11 @@ function Slideshow({ images }) {
         ))}
       </div>
 
-      <div className="slideshow-nav">
+      <motion.div className="slideshow-nav"
+       ref={ref}
+       initial="hidden"
+       animate={isInView ? "visible" : "hidden"}
+       variants={textVariants}>
         {images.map((_, index) => (
           <button
             key={index}
@@ -114,7 +137,7 @@ function Slideshow({ images }) {
             ref={(el) => (tabsRef.current[index] = el)}
           ></button>
         ))}
-      </div>
+      </motion.div>
     </div>
   );
 }

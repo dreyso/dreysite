@@ -2,8 +2,25 @@ import Slideshow from './slideshow';
 import grad from "../assets/imgs/grad.webp"
 import snow from "../assets/imgs/snow.webp"
 import bike from "../assets/imgs/bike.webp"
+import { useRef } from 'react';
+import { motion, useInView } from 'framer-motion';
+
+const textVariants = {
+  hidden: {
+    opacity: 0,
+    clipPath: "inset(0 100% 0 0)", // Fully masked from the right
+  },
+  visible: {
+    opacity: 1,
+    clipPath: "inset(0 0 0 0)", // Revealed completely
+    transition: { duration: 1, ease: "easeInOut" }
+  },
+};
 
 function Narrative() {
+  const ref = useRef(null);
+  const isInView = useInView(ref, { once: true }); 
+
   const images = [
     {
       src: grad,
@@ -28,7 +45,12 @@ function Narrative() {
   return (
     <section id="narrative" className="main-section">
       <Slideshow images={images} />
-      <div className="text-wrapper centered">
+      <motion.div className="text-wrapper centered"
+          ref={ref}
+          initial="hidden"
+          animate={isInView ? "visible" : "hidden"}
+          variants={textVariants}
+        >
         <h2 className="highlight-first">Narrative</h2>
         <p>
           Hi, I'm Andrey. I graduated from Portland State University (2024)
@@ -37,7 +59,7 @@ function Narrative() {
           design. In my spare time, I'm either snowboarding or working on my
           motorcycle.
         </p>
-      </div>
+      </motion.div>
     </section>
   );
 }

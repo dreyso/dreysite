@@ -10,6 +10,8 @@ const expandAnimation = {
   transition: {
     duration: 0.5,
     ease: "easeOut",
+    scale: { duration: 1 },
+    opacity: { duration: 1 },
   },
 };
 function Banner({ sections, sectionIds}) {
@@ -70,7 +72,7 @@ function Banner({ sections, sectionIds}) {
       <motion.a 
       href="#"
       {...expandAnimation}
-      whileHover={{ rotate: 25, transition: { duration: 0.5 } }}>
+      whileHover={{ rotate: 25 }}>
         <img
           src="/logo.svg"
           id="logo"
