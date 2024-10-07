@@ -2,7 +2,16 @@ import React, { useEffect, useState, useRef } from "react";
 import "./banner.css";
 import NavToggle from "./navToggle";
 import Nav from "./nav";
+import { motion } from 'framer-motion';
 
+const expandAnimation = {
+  initial: { scale: 0, opacity: 0 },   // Starting state: scaled down and transparent
+  animate: { scale: 1, opacity: 1 },   // Expanded state: full size and visible
+  transition: {
+    duration: 0.5,
+    ease: "easeOut",
+  },
+};
 function Banner({ sections, sectionIds}) {
   const [menuVisible, setMenuVisible] = useState(false);
   const navRef = useRef(null);
@@ -56,50 +65,25 @@ function Banner({ sections, sectionIds}) {
     };
   }, []);
 
-  // Highlight mobile nav tab that corresponds to the current page section
-  useEffect(() => {
-    const navHighlighter = () => {
-      let closestSection = null;
-      let smallestDifference = Infinity;
-
-      sectionIds.forEach(sectionId => {
-        const sectionElement = document.getElementById(sectionId);
-        if (sectionElement) {
-          const sectionTop = sectionElement.offsetTop;
-          const difference = Math.abs(window.scrollY - sectionTop);
-
-          if (difference < smallestDifference) {
-            smallestDifference = difference;
-            closestSection = sectionId;
-          }
-        }
-      });
-
-      if (closestSection) {
-        Array.from(navRef.current.children).forEach(link => {
-          link.classList.remove("active-nav-tab");
-        });
-
-        const activeLink = navRef.current.querySelector(`a[href="#${closestSection}"]`);
-        if (activeLink) {
-          activeLink.classList.add("active-nav-tab");
-        }
-      }
-    };
-
-    window.addEventListener("scroll", navHighlighter);
-    return () => {
-      window.removeEventListener("scroll", navHighlighter);
-    };
-  }, [sectionIds]);
-
   return (
     <header id="banner" ref={bannerRef}>
-      <a href="#">
-        <img src="/logo.svg" id="logo" title="Andrey Steblyakov" alt="Andrey Steblyakov logo" />
-      </a>
-      <NavToggle menuVisible={menuVisible} onToggle={() => setMenuVisible(prev => !prev)} />
-      <Nav sections={sections} ref={navRef} />
+      <motion.a 
+      href="#"
+      {...expandAnimation}
+      whileHover={{ rotate: 25, transition: { duration: 0.5 } }}>
+        <img
+          src="/logo.svg"
+          id="logo"
+          title="Andrey Steblyakov"
+          alt="Andrey Steblyakov logo"
+        />
+      </motion.a>
+      
+      <motion.div {...expandAnimation}>
+        <NavToggle menuVisible={menuVisible} onToggle={() => setMenuVisible(prev => !prev)} />
+      </motion.div>
+
+      <Nav sections={sections} sectionIds={sectionIds} ref={navRef} />
     </header>
   );
 }
