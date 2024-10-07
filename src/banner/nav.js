@@ -43,6 +43,11 @@ const Nav = React.forwardRef(({ sections, sectionIds }, ref) => {
       }
     };
 
+    // Set first section active by default
+    const firstLink = ref.current.children[0];
+    firstLink.classList.add("active-nav-tab");
+      
+
     window.addEventListener("scroll", navHighlighter);
     return () => {
       window.removeEventListener("scroll", navHighlighter);
