@@ -4,6 +4,9 @@ import { FaLinkedin } from "react-icons/fa";
 import { FaImagePortrait } from "react-icons/fa6";
 import { IoIosMail } from "react-icons/io";
 import { motion, useInView } from 'framer-motion';
+import resume from "../assets/resume.pdf";
+
+ 
 
 
 const sectionVariants = {
@@ -18,7 +21,7 @@ const sectionVariants = {
 function Yours() {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true }); 
-  
+
   const copyButtonRef = useRef(null);
   const email = "adreysco@gmail.com";
 
@@ -51,7 +54,7 @@ function Yours() {
         <a href="https://www.linkedin.com/in/adreyso">
         <FaLinkedin size={30}/>
         </a>
-        <a href="assets/resume.pdf">
+        <a href={resume}>
         <FaImagePortrait size={30}/>
         </a>
       </div>
