@@ -25,7 +25,7 @@ function Endeavors() {
       <h2 className="highlight-first">Endeavors</h2>
       <img
         src={sparky}
-        alt="Image of a 2d polygon map"
+        alt="A 2d polygon map"
         draggable="false"
       />
       <div className="centered">
