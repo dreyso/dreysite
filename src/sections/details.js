@@ -36,7 +36,6 @@ function Details() {
         <li>C | C++ | Python</li>
         <li>Web dev (React | Fask | SQL)</li>
         <li>Visual Studio | VS Code | Vim</li>
-        <li>Git</li>
         <li>Native Russian speaker</li>
       </motion.ul>
     </section>
