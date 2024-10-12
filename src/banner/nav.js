@@ -12,7 +12,20 @@ const navVariants = {
 
 const Nav = React.forwardRef(({ sections, sectionIds }, ref) => {
   
-  // Highlight mobile nav tab that corresponds to the current page section
+  // Handle smooth scrolling
+  const handleScroll = (event, section) => {
+    event.preventDefault();
+    const targetSection = document.getElementById(section.toLowerCase());
+
+    if (targetSection) {
+      targetSection.scrollIntoView({
+        behavior: 'smooth',
+        block: 'start',
+      });
+    }
+  };
+
+  // Highlight mobile nav tab that corresponds to the current page section when scrolling
   useEffect(() => {
     const navHighlighter = () => {
       let closestSection = null;
@@ -46,13 +59,12 @@ const Nav = React.forwardRef(({ sections, sectionIds }, ref) => {
     // Set first section active by default
     const firstLink = ref.current.children[0];
     firstLink.classList.add("active-nav-tab");
-      
 
     window.addEventListener("scroll", navHighlighter);
     return () => {
       window.removeEventListener("scroll", navHighlighter);
     };
-  }, [sectionIds]);
+  }, [sectionIds, ref]);
 
   return (
     <nav ref={ref} id="nav-menu">
@@ -65,6 +77,7 @@ const Nav = React.forwardRef(({ sections, sectionIds }, ref) => {
           initial="hidden"
           animate="visible"
           custom={index} // Pass the index for delay calculation
+          onClick={(e) => handleScroll(e, section)} // Smooth scroll
         >
           {section}
         </motion.a>

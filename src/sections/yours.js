@@ -6,8 +6,6 @@ import { IoIosMail } from "react-icons/io";
 import { motion, useInView } from 'framer-motion';
 import resume from "../assets/resume.pdf";
 
- 
-
 
 const sectionVariants = {
   hidden: { opacity: 0, y: 100 },
